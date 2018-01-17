@@ -1,0 +1,32 @@
+////
+/// @group style.scss
+////
+
+// сбор всех основных блоков для текущего проекта
+// данный файл только импортирует нужные блоки кода
+// написание чистого кода в этом файле - запрещается
+// -------------------------------------------------
+
+@import "_settings/all";
+
+// structure
+@import "_blocks/wrapper";
+@import "_blocks/section";
+@import "_blocks/container";
+
+// ui
+@import "_blocks/demo";
+@import "_blocks/ratio";
+@import "_blocks/preloader";
+@import "_blocks/sitemap";
+@import "_blocks/wstabs";
+
+// form
+@import "_blocks/form";
+
+// button
+@import "_blocks/button";
+
+// text
+@import "_blocks/title";
+@import "_blocks/horizontal-scroll";

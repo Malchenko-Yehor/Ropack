@@ -1,0 +1,83 @@
+<%
+	/** Шаблон страницы UI Kit
+	 * @name ui.ejs */
+
+	/** установка лейаута страницы */
+	app.setLayout('default-view.ejs');
+
+	/** расширение глобального объекта app
+	 * @see module:core */
+	app.require('core.js')(app);
+
+	// выгружаем инструменты
+	const {currentView} = app.data;
+
+	// список демо виджетов
+	const widgetList = [
+		{
+			title: 'Title',
+			src: 'ui-demo/title.ejs'
+		}, {
+			title: 'Кнопки',
+			src: 'ui-demo/buttons.ejs'
+		}, {
+			title: 'Magnific popup',
+			src: 'ui-demo/magnific-popup.ejs'
+		}, {
+			title: 'wsTabs',
+			src: 'ui-demo/wstabs.ejs'
+		}, {
+			title: 'Цвета',
+			src: 'ui-demo/colors.ejs'
+		}
+	];
+%>
+
+<style>
+	.demo-columns {
+		column-count: 4;
+		column-width: 160px;
+		padding-left: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	.demo-columns li {
+		overflow: hidden;
+		-webkit-column-break-inside: avoid;
+		margin-bottom: 6px;
+	}
+</style>
+
+<div id="top" class="section">
+	<div class="container _mtb-lg">
+		<h3><%- currentView.title %></h3>
+		<div class="wysiwyg">
+			<p>Список блоков:</p>
+			<ul class="demo-columns">
+				<% widgetList.forEach((item, i) => { %>
+					<li><a href="#anchor-<%- i %>"><%- i + 1 %>. <%- item.title %></a></li>
+				<% }) %>
+			</ul>
+		</div>
+
+		<div class="demo">
+			<h3>Карта сайта</h3>
+			<%- app.widget('sitemap-list.ejs') %>
+		</div>
+	</div>
+</div>
+
+<% widgetList.forEach((item, i) => { %>
+	<div class="section" id="anchor-<%- i %>">
+		<div class="container _mtb-def">
+			<hr style="margin: 2rem 0 0;">
+			<h3>
+				<a href="#top" title="Наверх">&uuarr;</a>
+				<a href="#anchor-<%- i %>" title="Установить якорь">#</a>
+				<%- item.title %>
+			</h3>
+		</div>
+		<%- app.widget(item.src, item.entryData) %>
+	</div>
+<% }); %>

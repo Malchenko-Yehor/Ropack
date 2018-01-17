@@ -1,0 +1,12 @@
+<%
+	/** Подключение внешних стилей и скриптов
+	 * @name stylesheets */
+
+	// выгружаем инструменты
+	const {media, comment} = app.module;
+%>
+<%- comment.php('Основные стили страницы') %>
+<link rel="stylesheet" href="<%- media('assets/css/vendors.css') %>">
+<link rel="stylesheet" href="<%- media('assets/css/editor.css') %>">
+<link rel="stylesheet" href="<%- media('assets/css/style.css') %>">
+<link rel="stylesheet" href="<%- media('assets/css/helpers.css') %>">

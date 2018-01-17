@@ -1,0 +1,18 @@
+<%
+	/** Подключение внешних скриптов
+	 * @name scripts */
+
+	// выгружаем инструменты
+	const {media, insert, comment} = app.module;
+%>
+<%- comment.todoPhp('Инлайновый вывод скриптовых переводов для плагинов и модулей') %>
+<%- insert.fromDist('./hidden/i18n/php-translations-script.php', true); %>
+
+<%- comment.php('Основные скрипты страницы') %>
+<script src="<%- media('assets/js/modernizr.js') %>"></script>
+<script src="<%- media('assets/js/vendors.js') %>"></script>
+<script src="<%- media('assets/js/initialize.js') %>"></script>
+
+<%- comment.todoPhp('Определение старых браузеров') %>
+<script>window.$wzmOld_URL_IMG = '<%- media('assets/css/static/pic/wezom-info-red.gif') %>';</script>
+<script async defer src="<%- media('assets/js/static/wezom-old.js') %>"></script>

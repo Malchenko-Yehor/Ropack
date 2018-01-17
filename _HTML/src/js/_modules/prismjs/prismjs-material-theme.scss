@@ -1,0 +1,277 @@
+/// @author Dutchenko Oleg <dutchenko.o.dev@gmail.com>
+
+$color-code: #CED3DF;
+$color-code-background: #212121;
+$color-code-punctuation: #6dc2b8;
+$color-code-annotation: #6b517f;
+$color-code-tag: #ff5370;
+$color-code-function: #76d4ff;
+$color-code-sass-function: #f78c6c;
+$color-code-string: #c3e887;
+$color-code-selector: #ffc251;
+$color-code-selector-id: #ffff00;
+$color-code-selector-class: #ffc251;
+$color-code-selector-attribute: $color-code-punctuation;
+$color-code-attr: #C2E78C;
+$color-code-keyword: #c792ea;
+$color-code-comment: #666;
+$color-code-css-property: #fdcf7b;
+$base-code-tab-size: 4;
+
+pre,
+code {
+	&[class*="language-"] {
+		color: $color-code;
+		text-shadow: none;
+		font-weight: 300;
+		font-size: 1rem;
+		font-family: 'Fira Code', monospace;
+		direction: ltr;
+		text-align: left;
+		white-space: pre;
+		word-spacing: normal;
+		word-break: normal;
+		word-wrap: normal;
+		line-height: 1.4em;
+		tab-size: $base-code-tab-size;
+		hyphens: none;
+		background: $color-code-background;
+
+		&::-moz-selection,
+		& ::-moz-selection,
+		&::selection,
+		& ::selection {
+			background: rgba(#fff, 0.2);
+		}
+	}
+}
+
+// Code blocks
+pre {
+	&[class*="language-"] {
+		padding: 2em 1.2rem;
+		margin: 1em 0;
+		overflow: auto;
+
+		@media screen and (min-width: 641px) {
+			padding: 2em;
+		}
+
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(#fff, 0.3);
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar {
+			width: 1rem;
+			height: 1rem;
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgba(#fff, .35);
+		}
+
+		&.code-toolbar {
+			.toolbar {
+				opacity: 1;
+				top: .3em;
+				right: 2em;
+
+				//&::after {
+				//	content: '';
+				//	position: absolute;
+				//	border-bottom: 2px solid #000;
+				//	right: 0;
+				//	top: 100%;
+				//	height: .2em;
+				//	width: 200px;
+				//	min-width: 100%;
+				//}
+
+				a,
+				span {
+					font-size: 1em;
+					background: transparent;
+					box-shadow: none;
+					color: $color-code-comment;
+					user-select: none;
+				}
+
+				span {
+					pointer-events: none;
+				}
+			}
+
+			&.language-ejs {
+				.toolbar {
+					span {
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Inline code
+:not(pre) > code {
+	&[class*="language-"] {
+		padding: .1em .3em;
+		border-radius: .3em;
+		white-space: normal;
+	}
+}
+
+[class*="language-"] {
+	.namespace {
+		opacity: .7;
+	}
+
+	.token {
+		&.comment,
+		&.prolog,
+		&.doctype,
+		&.cdata {
+			color: $color-code-comment;
+			font-weight: normal;
+		}
+
+		&.operator,
+		&.punctuation {
+			color: $color-code-punctuation;
+		}
+
+		&.tag {
+			color: $color-code-tag;
+		}
+
+		&.property,
+		&.constant,
+		&.function,
+		&.symbol,
+		&.deleted {
+			color: $color-code-function;
+		}
+
+		&.function {
+			.style &,
+			.language-css &,
+			.language-sass &,
+			.language-scss & {
+				color: $color-code-sass-function;
+			}
+		}
+
+		&.property {
+			.style &,
+			.language-css &,
+			.language-sass &,
+			.language-scss & {
+				color: $color-code-css-property;
+			}
+		}
+
+		&.selector {
+			color: $color-code-selector;
+
+			.id {
+				color: $color-code-selector-id;
+			}
+
+			.class {
+				color: $color-code-selector-class;
+			}
+
+			.attribute {
+				color: $color-code-selector-attribute;
+			}
+		}
+
+		&.attr-name,
+		&.string,
+		&.char,
+		&.builtin,
+		&.inserted {
+			color: $color-code-string;
+
+			.comment & {
+				color: $color-code-comment;
+			}
+		}
+
+		&.entity,
+		&.url,
+		.language-css &.string,
+		.style &.string {
+			color: $color-code-selector;
+		}
+
+		&.atrule,
+		&.attr-value {
+			color: $color-code-attr;
+		}
+
+		&.number,
+		&.important,
+		&.time,
+		&.easing,
+		&.angle,
+		&.boolean,
+		&.keyword {
+			color: $color-code-keyword;
+		}
+
+		&.regex,
+		&.important,
+		&.variable {
+			color: $color-code-selector;
+
+			.comment & {
+				color: $color-code-comment;
+			}
+		}
+
+		&.operator,
+		&.important,
+		&.bold {
+			font-weight: bold;
+		}
+
+		&.italic {
+			font-style: italic;
+		}
+
+		&.entity {
+			cursor: help;
+		}
+
+		&.annotation {
+			color: $color-code-annotation;
+		}
+
+		&.tab:not(:empty),
+		&.cr,
+		&.lf,
+		&.space {
+			&::before {
+				color: #000;
+			}
+		}
+	}
+}
+
+.prism-previewer-time,
+.prism-previewer-angle,
+.prism-previewer-color,
+.prism-previewer-gradient {
+	width: 4em;
+	height: 4em;
+	margin-top: -5em;
+	margin-left: -2em;
+
+	svg {
+		width: 4em;
+		height: 4em;
+	}
+}

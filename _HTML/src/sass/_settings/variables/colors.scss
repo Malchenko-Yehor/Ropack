@@ -1,0 +1,29 @@
+////
+/// @group _settings/
+////
+
+/// Карта цветов
+/// @type {Map}
+/// @prop {Color} $colors.link
+$colors: (
+	// Основные
+	back: #868686,
+	bg: #e9e9e9,
+	text: #234,
+
+	/// Ссылки
+	link: #4444fe,
+	link-visited: #5806b0,
+	link-hover: #fe4444,
+	link-active: #000,
+
+	// Цветовые статусы
+	primary: #4444fe,
+	secondary: #313131,
+	accent: #fcfcca,
+	success: #ebba10,
+	info: #00b3fe,
+	warning: #c89600,
+	danger: #f00
+);
+

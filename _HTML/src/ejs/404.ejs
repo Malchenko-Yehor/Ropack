@@ -1,0 +1,49 @@
+<%
+	/** Шаблон страницы 404
+	 * @name 404.ejs */
+
+	/** установка лейаута страницы */
+	app.setLayout('error-view.ejs');
+
+	/** расширение глобального объекта app
+	 * @see module:core */
+	app.require('core.js')(app);
+
+	// выгружаем инструменты
+	const {currentView, usePHP, paths} = app.data;
+	const {__} = app.module;
+
+	// Текст уведомления
+	let errorText = __('404. К сожалению, страница, которую Вы запросили, не была найдена');
+	if (usePHP) {
+		errorText = __.trim(errorText);
+		errorText = `<?php echo str_replace(':main', './', ${errorText}); ?>`;
+	} else {
+		errorText = errorText.replace(/:main/, paths.toMarkup);
+	}
+%>
+<div class="section">
+	<div class="container _ptb-lg">
+		<div class="title"><%- currentView.title %></div>
+
+		<div class="wysiwyg">
+			<p class="_ellipsis">
+				<code id="location-href"></code>
+				<script>
+					;(function () {
+						window.setTimeout(function () {
+							var el = document.getElementById('location-href');
+							if (el !== null) {
+								el.textContent = window.location.href;
+							}
+						}, 0);
+					})();
+				</script>
+			</p>
+		</div>
+
+		<div class="wysiwyg">
+			<p><%- errorText %></p>
+		</div>
+	</div>
+</div>

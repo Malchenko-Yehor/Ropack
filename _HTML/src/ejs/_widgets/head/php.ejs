@@ -1,0 +1,26 @@
+<%
+	/** PHP Шапка для имитации usePHP
+	 * @name head/php.ejs */
+
+	// выгружаем инструменты
+	const {usePHP, lang: LANG} = app.data;
+	const {host} = app.module;
+
+	// если php отключен
+	if (!usePHP || app.blocks['no-php-define']) {
+		// noinspection JSAnnotator
+		return '';
+	}
+%><?php
+	if (!defined('HOST')) {
+		define('HOST', '<%- host() %>');
+	}
+	$hiddenFolder = '<%- (~app.viewPath.indexOf('hidden') ? '' : 'hidden/') %>';
+	require_once($hiddenFolder . 'HTML.php');
+	use Core\HTML;
+
+	if (!function_exists('__')) {
+		require_once($hiddenFolder . 'i18n/I18n.php');
+		\I18n::lang('<%- LANG %>');
+	}
+?>

@@ -1,0 +1,33 @@
+////
+/// @group _settings/
+////
+
+/// Пользовательские заголовки
+.title {
+	font-family: map-get($font-family, main);
+	margin: map-get($gutters, lg) 0;
+	line-height: 1.2;
+	font-weight: 600;
+	font-size: 1.8rem;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: map-get($colors, link);
+
+		&:hover {
+			color: map-get($colors, link-hover);
+		}
+
+		&:active {
+			color: map-get($colors, link-active);
+		}
+	}
+}

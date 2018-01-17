@@ -1,0 +1,18 @@
+////
+/// @group _blocks/
+////
+
+/// Description
+.sitemap {
+	a {
+		color: map-get($colors, link);
+
+		&:hover {
+			color: map-get($colors, link-hover);
+		}
+
+		&:active {
+			color: map-get($colors, link-active);
+		}
+	}
+}

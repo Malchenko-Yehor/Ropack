@@ -1,0 +1,7 @@
+options:
+  config-file: ./node_modules/happiness-scss-config/.sass-lint.yml
+rules:
+  max-file-line-count:
+    - 1
+    -
+      length: 500

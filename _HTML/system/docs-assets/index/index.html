@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Документация: Home</title>
+
+	<link rel="icon" type="image/png" href="js/favicon.ico"/>
+	<link rel="stylesheet" href="js/styles/jsdoc-prism.css">
+	<link rel="stylesheet" href="js/styles/jsdoc-utils.css">
+	<link rel="stylesheet" href="js/styles/jsdoc-style.css">
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="container">
+		<div class="_ptb-double _plr-triple ">
+
+			<div class="grid grid--space-triple">
+				<div class="gcell gcell--12">
+					<div class="_pl-double">
+						<main class="main">
+							<section>
+								<article class="wysiwyg">
+									<h1>docs index</h1>
+									<hr class="divine">
+									<blockquote>
+										<p>API документация по шаблону сборки</p>
+									</blockquote>
+									<p>Разделы докуметнации:</p>
+									<ul>
+										<li><a href="ejs/index.html">EJS API docs</a> - Документация по скриптам ejs разметки</li>
+										<li><a href="js/index.html">JavaScript API docs</a> - Документация по скриптам верстки</li>
+										<li><a href="sassdoc/index.html">Sass source docs</a> - Документация по стилям верстки</li>
+										<li><a href="sass-tutorials/index.html">SASS tutorials</a>
+										<li><a href="system/index.html">System API docs</a> - Документация по скриптам сборки проекта</li>
+									</ul>
+									<hr>
+								</article>
+							</section>
+						</main>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer _plr-triple">
+		<div class="_pl-double">
+			<small>
+				API документация по шаблону сборки, на основе
+				<a href="https://bitbucket.org/wezom/wezom-starter-template-default" target="_blank">wezom-starter--template-default</a>.
+			</small>
+		</div>
+	</footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdn.rawgit.com/leafo/sticky-kit/v1.1.2/jquery.sticky-kit.min.js"></script>
+<script>
+	jQuery(document).ready(function ($) {
+
+		$('.prettyprint').removeClass('prettyprint');
+
+		$('a').each(function (index, el) {
+			var $a = $(el);
+
+			if ($a.closest('pre').length) {
+				return true;
+			}
+
+			var href = $a.attr('href');
+			if (/^http/.test(href)) {
+				$a.attr('target', '_blank');
+
+				if (!$a.attr('title')) {
+					$a.attr('title', href.toLowerCase());
+					$a.attr('href', href.toLowerCase());
+					$a.append(' &rArr;');
+				}
+			}
+		});
+
+		var transliterate = (function () {
+			var rus = "щ   ш  ч  ц  ю  я  ё  ж  ъ  ы  э  а б в г д е з и й к л м н о п р с т у ф х ь".split(/ +/g);
+			var eng = "shh sh ch cz yu ya yo zh _  y  e  a b v g d e z i j k l m n o p r s t u f x _".split(/ +/g);
+
+			return function (text) {
+				for (var x = 0; x < rus.length; x++) {
+					text = text.split(rus[x]).join(eng[x]);
+					text = text.split(rus[x].toUpperCase()).join(eng[x].toUpperCase());
+				}
+
+				return text.replace(/\W+/g, '_');
+			}
+		})();
+
+		var headers = [];
+		$('.anchor-header').each(function () {
+			var $h = $(this);
+			var text = $(this).data('text') || $(this).text();
+			text = text.replace(/::/g, '.');
+			var id = $h.prop('id') || transliterate(text);
+
+			headers.push('<li class="lvl-' + this.tagName.toLowerCase() + '"><a href="#' + id + '">' + text + '</a></li>');
+		});
+
+		if (headers.length > 1) {
+			$('.js-insert-nav')
+					.find('.wysiwyg')
+					.html('<h2>Tables of contents</h2><ul>' + headers.join('') + '</ul>');
+		} else {
+			$('.js-insert-nav')
+					.addClass('_hide!')
+		}
+
+		$(".js-sidebar").each(function () {
+			$(this).stick_in_parent();
+		});
+	});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js"></script>
+<script src="js/scripts/jsdoc-prism.js"></script>
+<script src="https://unpkg.com/prism-ejs-language@latest/prism-ejs-language.js"></script>
+</body>
+</html>

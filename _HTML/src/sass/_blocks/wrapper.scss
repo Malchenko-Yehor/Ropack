@@ -1,0 +1,12 @@
+////
+/// @group _blocks/
+////
+
+/// Основная обертка страницы
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	position: relative;
+	min-height: 100%;
+}

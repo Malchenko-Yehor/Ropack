@@ -1,0 +1,49 @@
+<%
+	/** Имитация PHP классов
+	 * @name Core.ejs */
+
+	/** установка лейаута всплывающего окна */
+	app.setLayout('_php.ejs');
+
+	/** расширение глобального объекта app
+	 * @see module:core */
+	app.require('core.js')(app);
+
+	// выгружаем инструменты
+	const {paths} = app.data;
+	const {host} = app.module;
+
+	const MEDIA = paths.toMedia;
+	const MEDIA_PATH = host.mediaPath().replace(host(), '');
+%><?php
+	namespace Core;
+	class HTML {
+		/**
+		 * Путь к SVG спрайту
+		 * Будет определен при первом вызове `HTML::svgSymbol()`
+		 */
+		private static $svgSymbolUrl = NULL;
+
+		/**
+		 * Вставка svg символа из спрайта
+		 * @param  string $symbol
+		 * @return string
+		 */
+		public static function svgSymbol ($symbol) {
+			// при первом обрашении кэшируем путь к спрайту
+			if (self::$svgSymbolUrl === NULL) {
+				self::$svgSymbolUrl = self::media('assets/images/sprites/icons.svg', false, true);
+			}
+			return self::$svgSymbolUrl . '#' . $symbol;
+		}
+
+		public static function media($file, $absolute = false, $version = true)	{
+			if ($version) {
+				$v = '?v=' . filemtime(HOST . '<%- MEDIA_PATH %>' . trim($file, '/'));
+			}
+			if ($absolute) {
+				return 'http://' . $_SERVER['HTTP_HOST'] . '<%- MEDIA %>' . trim($file, '/') . $v;
+			}
+			return '/Media/' . trim($file, '/') . $v;
+		}
+	}

@@ -1,0 +1,19 @@
+////
+/// @group _blocks/
+////
+
+/// Описание
+.section {
+	position: relative;
+
+	&--header {
+		background-color: map-get($colors, bg);
+		padding: map-get($gutters, def) 0;
+	}
+
+	&--footer {
+		background-color: map-get($colors, text);
+		color: #fff;
+		padding: map-get($gutters, def) 0;
+	}
+}

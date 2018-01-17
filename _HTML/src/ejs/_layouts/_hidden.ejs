@@ -1,0 +1,16 @@
+<%
+	/** @namespace app
+	 * @see module:core
+	 * @see module:docs */
+
+	/** Лейаут всплывающих окон
+	 * @name _hidden */
+
+	// php шапка
+	let headPhp = '';
+	if (app.data.usePHP) {
+		headPhp = app.widget('head/php.ejs').replace(/(\r)?\n/g, ' ');
+		headPhp = headPhp.replace(/(\t|\s+$)/g, '');
+	}
+
+%><%- headPhp %><%- app.body %>

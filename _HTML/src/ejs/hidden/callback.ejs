@@ -1,0 +1,35 @@
+<%
+	/** пример формы обратного звонка
+	 * @name callback.ejs */
+
+	/** установка лейаута всплывающего окна */
+	app.setLayout('_hidden.ejs');
+
+	/** расширение глобального объекта app
+	 * @see module:core */
+	app.require('core.js')(app);
+
+%><div class="magnific-popup magnific-popup--sm">
+	<div class="container">
+		<div class="title title--sub">Callback</div>
+		<form class="form js-form" data-ajax="response/demo.json">
+			<div class="form-group">
+				<label for="callback-email">Ваш e-mail</label>
+				<div class="form-controller">
+					<input type="email" name="callback-email" id="callback-email" required class="form-input">
+				</div>
+				<label id="callback-email-error" class="has-error" for="callback-email" style="display: none;"></label>
+			</div>
+			<div class="form-group">
+				<label for="callback-tel">Ваш телефон</label>
+				<div class="form-controller">
+					<input type="tel" name="callback-tel" id="callback-tel" required data-rule-phoneua="true" class="form-input" data-phone-mask>
+				</div>
+				<label id="callback-tel-error" class="has-error" for="callback-tel" style="display: none;"></label>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="form-button form-button--submit button">
+			</div>
+		</form>
+	</div>
+</div>

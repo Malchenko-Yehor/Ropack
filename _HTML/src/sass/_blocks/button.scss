@@ -1,0 +1,43 @@
+////
+/// @group _blocks/
+////
+
+/// Description
+.button {
+	position: relative;
+	font-size: 1rem;
+	line-height: normal;
+	padding: 0.25em 1em;
+	border: 1px solid map-get($colors, back);
+	border-radius: map-get($gutters, sm);
+	background-color: transparent;
+	color: inherit;
+	text-align: center;
+	text-decoration: none !important; // sass-lint:disable-line no-important
+	box-sizing: border-box;
+	cursor: pointer;
+	user-select: none;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: rem(5px);
+
+	&:hover {
+		background-color: map-get($colors, bg);
+	}
+
+	&:active {
+		background-color: map-get($colors, back);
+	}
+
+	&:disabled {
+		opacity: .6;
+	}
+
+	&.is-active {
+		background-color: map-get($colors, bg);
+	}
+
+	&--block {
+		display: block;
+	}
+}

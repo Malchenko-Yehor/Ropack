@@ -1,0 +1,32 @@
+<%
+	/** Пример текстовой страницы
+	 * @name wysiwyg/wysiwyg-example.ejs */
+	const {md2html} = app.module;
+%>
+<div class="wysiwyg">
+	<%- md2html('mds/wysiwyg/example.md') %>
+
+	<h2>Media</h2>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto distinctio eos ex ipsum laudantium optio
+		perferendis quasi quibusdam quisquam, totam? Ad alias, culpa facilis impedit ipsum molestiae optio placeat
+		tempora?
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+	<iframe width="1280" height="720" src="https://www.youtube.com/embed/4GUwXxqwyu4?rel=0" frameborder="0" allowfullscreen></iframe>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto distinctio eos ex ipsum laudantium optio
+		perferendis quasi quibusdam quisquam, totam? Ad alias, culpa facilis impedit ipsum molestiae optio placeat
+		tempora?
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+	<video controls width="1280" height="720" src="<%- app.module.media('assets/files/video.mp4') %>" poster="<%- app.module.media('assets/files/poster.jpg') %>"></video>
+
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto distinctio eos ex ipsum laudantium optio
+	perferendis quasi quibusdam quisquam, totam? Ad alias, culpa facilis impedit ipsum molestiae optio placeat tempora?
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+	<audio controls src="<%- app.module.media('assets/files/audio.mp3') %>"></audio>
+
+	<hr>
+</div>

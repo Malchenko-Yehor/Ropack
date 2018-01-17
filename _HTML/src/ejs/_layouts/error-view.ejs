@@ -1,0 +1,17 @@
+<%
+	/** @namespace app
+	 * @see module:core
+	 * @see module:docs */
+
+	/** Лейаут страниц ошибок
+	 * @name error-view */
+
+	/** установка лейаута */
+	app.setLayout('_base.ejs');
+%>
+<div class="wrapper">
+	<div class="section _flex-grow">
+		<%- app.widget('header-error.ejs') %>
+		<%- app.body %>
+	</div>
+</div>

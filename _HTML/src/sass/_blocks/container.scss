@@ -1,0 +1,42 @@
+////
+/// @group _blocks/
+////
+
+/// Блок для центрирования контента
+.container {
+	$gap: map-get($gutters, def);
+
+	width: calc(100% - #{$gap * 2});
+	flex-basis: 100%;
+	max-width: 1280px;
+	box-sizing: content-box;
+	padding-left: $gap;
+	padding-right: $gap;
+	margin-left: auto;
+	margin-right: auto;
+
+	> *, // sass-lint:disable-line no-universal-selectors
+	::after,
+	::before,
+	&::after,
+	&::before {
+		box-sizing: border-box;
+	}
+
+	& &,
+	&--no-gap {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--tiny {
+		max-width: 980px;
+	}
+
+	&--full {
+		max-width: 100%;
+	}
+
+	@include clearfix();
+}

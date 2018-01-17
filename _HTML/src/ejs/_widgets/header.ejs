@@ -1,0 +1,18 @@
+<%
+	/** шапка сайта
+	 * @name header.ejs */
+
+	// выгружаем инструменты
+	const {currentView, views} = app.data;
+%>
+<div class="section section--header">
+	<div class="container">
+		<div class="title title--sub">
+			<% if (currentView.name === views.index.name) { %>
+				<span>Header</span>
+			<% } else { %>
+				<a href="<%- views.index.href %>"><%- views.index.title %></a>
+			<% } %>
+		</div>
+	</div>
+</div>

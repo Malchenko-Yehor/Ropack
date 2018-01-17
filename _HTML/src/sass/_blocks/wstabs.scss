@@ -1,0 +1,24 @@
+////
+/// @group _blocks/
+////
+
+/// Кнопки
+.wstabs-button {
+	cursor: pointer;
+
+	&.is-active {
+		cursor: default;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		cursor: not-allowed;
+	}
+}
+
+// Блоки
+.wstabs-block {
+	&:not(.is-active) {
+		display: none;
+	}
+}

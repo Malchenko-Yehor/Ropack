@@ -1,0 +1,175 @@
+<%
+	/** Шаблон страницы c примерами форм
+	 * @name ui-forms.ejs */
+
+	/** установка лейаута страницы */
+	app.setLayout('default-view.ejs');
+
+	/** расширение глобального объекта app
+	 * @see module:core */
+	app.require('core.js')(app);
+
+	// выгружаем инструменты
+	const {currentView} = app.data;
+%>
+<div class="section">
+	<div class="section__container">
+		<div class="container _ptb-lg">
+			<div class="title"><%- currentView.title %></div>
+
+			<div class="grid grid--1 grid--md-2 grid--space-lg">
+
+				<div class="_col">
+					<div class="demo">
+						<div class="title title--sub">Lorem ipsum dolor</div>
+						<form class="form js-form" data-ajax="./hidden/response/demo.json">
+							<div class="form-group">
+								<input type="text" name="send" data-name="send"
+										value="send" placeholder="placeholder"
+										required class="form-input">
+							</div>
+
+							<div class="form-group">
+								<input type="submit" class="form-button form-button--submit">
+								<input type="reset" class="form-button form-button--reset">
+							</div>
+						</form>
+					</div>
+					<br>
+					<div class="demo">
+						<div class="title title--sub">Lorem ipsum dolor</div>
+						<form class="form js-form" data-ajax="./hidden/response/demo.json">
+							<div class="form-group">
+								<input type="text" name="text" data-name="text"
+										placeholder="text"
+										required class="form-input">
+							</div>
+							<div class="form-group">
+								<input type="text" name="login" data-name="login"
+										placeholder="login"
+										required data-rule-login="true"
+										class="form-input">
+							</div>
+							<div class="form-group">
+								<input type="text" name="word" data-name="word"
+										placeholder="word"
+										required data-rule-word="true"
+										class="form-input">
+							</div>
+							<div class="form-group">
+								<input type="password" name="password" data-name="password"
+										placeholder="password"
+										required class="form-input">
+							</div>
+							<div class="form-group">
+								<input type="tel" name="number" data-name="number"
+										placeholder="number"
+										required data-rule-number="true"
+										class="form-input">
+							</div>
+							<div class="form-group">
+								<input type="tel" name="digits" data-name="digits"
+										placeholder="digits"
+										required data-rule-digits="true"
+										class="form-input">
+							</div>
+							<div class="form-group">
+								<textarea name="textarea" data-name="textarea"
+										cols="30" rows="5" placeholder="textarea"
+										required data-rule-minlength="10"
+										class="form-textarea"></textarea>
+							</div>
+							<div class="form-group">
+								<input type="submit" class="form-button form-button--submit">
+								<input type="reset" class="form-button form-button--reset">
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="_col">
+					<div class="demo">
+						<div class="title title--sub">Lorem ipsum dolor</div>
+						<form class="form js-form" data-ajax="./hidden/response/demo.json">
+							<div class="form-group">
+								<input type="url" name="url" data-name="url"
+										placeholder="url" required
+										class="form-input">
+							</div>
+							<div class="form-group">
+								<input type="email" name="email" data-name="email"
+										placeholder="email" required
+										class="form-input">
+							</div>
+							<div class="form-group">
+								<input type="text" name="tel" data-name="tel"
+										placeholder="+38(___) __-__-___"
+										required data-rule-phoneua="true"
+										class="form-input" data-phone-mask>
+							</div>
+							<div class="form-group">
+								<input type="file" name="file-single"
+										data-name="file-single" required>
+							</div>
+							<div class="form-group">
+								<input type="file" name="file-multiple"
+										data-name="file-multiple" multiple required>
+							</div>
+
+							<div class="form-group">
+								<label class="form-flag">
+									<input type="checkbox" name="checkbox" data-name="checkbox" value="1"
+											required class="form-flag__input form-flag__input--checkbox">
+									<span class="form-flag__value">checkbox 1</span>
+								</label>
+								<label class="form-flag">
+									<input type="checkbox" name="checkbox" data-name="checkbox" value="2"
+											class="form-flag__input form-flag__input--checkbox">
+									<span class="form-flag__value">checkbox 2</span>
+								</label>
+								<div>
+									<label id="checkbox-error" class="has-error" for="checkbox" style="display: none;"></label>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-flag">
+									<input type="radio" name="radio" data-name="radio" value="1"
+											required class="form-flag__input form-flag__input--radio">
+									<span class="form-flag__value">radio 1</span>
+								</label>
+								<label class="form-flag">
+									<input type="radio" name="radio" data-name="radio" value="2"
+											class="form-flag__input form-flag__input--radio">
+									<span class="form-flag__value">radio 2</span>
+								</label>
+								<div>
+									<label id="radio-error" class="has-error" for="radio" style="display: none;"></label>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<select name="select" data-name="select" required class="form-select form-select--single">
+									<option selected disabled>required</option>
+									<option value="1">value 1</option>
+									<option value="2">value 2</option>
+									<option value="3">value 3</option>
+									<option value="4">value 4</option>
+									<option value="5">value 5</option>
+								</select>
+								<div>
+									<label id="select-error" class="has-error" for="select" style="display: none;"></label>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<input type="submit" class="form-button form-button--submit">
+								<input type="reset" class="form-button form-button--reset">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

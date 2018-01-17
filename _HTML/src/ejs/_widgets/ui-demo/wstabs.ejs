@@ -1,0 +1,109 @@
+<%
+	/** примеры табов
+	 * @name ui-demo/wstabs.ejs */
+%>
+<div class="container">
+	<div class="_mb-def">
+		<button class="wstabs-button button is-active" data-wstabs-ns="group-1" data-wstabs-button="1">
+			wstabs button 1
+		</button>
+		<button class="wstabs-button button" data-wstabs-ns="group-1" data-wstabs-button="2">
+			wstabs button 2
+		</button>
+		<button class="wstabs-button button" data-wstabs-ns="group-1" data-wstabs-button="3">
+			wstabs button 3
+		</button>
+	</div>
+	<div class="demo">
+		<div class="wstabs-block is-active" data-wstabs-ns="group-1" data-wstabs-block="1">
+			<div class="wysiwyg">
+				<h3>wstabs-block 1</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur culpa cupiditate dicta
+					dolorum, ea et, incidunt minus natus, odio repellendus veniam voluptas? Ab nemo obcaecati pariatur
+					quidem quis voluptate?</p>
+			</div>
+		</div>
+		<div class="wstabs-block" data-wstabs-ns="group-1" data-wstabs-block="2">
+			<div class="wysiwyg">
+				<h3>wstabs-block 2</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur culpa cupiditate dicta
+					dolorum, ea et, incidunt minus natus, odio repellendus veniam voluptas? Ab nemo obcaecati pariatur
+					quidem quis voluptate?</p>
+			</div>
+		</div>
+		<div class="wstabs-block" data-wstabs-ns="group-1" data-wstabs-block="3">
+			<div class="wysiwyg">
+				<h3>wstabs-block 3</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab consequatur culpa cupiditate dicta
+					dolorum, ea et, incidunt minus natus, odio repellendus veniam voluptas? Ab nemo obcaecati pariatur
+					quidem quis voluptate?</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="_mb-def">
+		<button class="wstabs-button button" data-wstabs-ns="group-video" data-wstabs-button="1">
+			Video code
+		</button>
+		<button class="wstabs-button button" data-wstabs-ns="group-video" data-wstabs-button="2">
+			Video play
+		</button>
+	</div>
+	<div class="demo">
+		<div class="wstabs-block" data-wstabs-ns="group-video" data-wstabs-block="1">
+			<div class="wysiwyg">
+				<pre>
+					<code class="language-ejs">
+&lt;div id="video-tab-block" class="wstabs-block" data-wstabs-ns="group-video" data-wstabs-block="2">
+	&lt;div class="wysiwyg">
+		&lt;video controls width="1280" height="720"
+				src="&lt;%- app.module.media('assets/files/video.mp4') %&gt;"
+				poster="&lt;%- app.module.media('assets/files/poster.jpg') %&gt;">&lt;/video>
+	&lt;/div>
+&lt;/div>
+					</code>
+				</pre>
+				<pre>
+					<code class="language-javascript">
+import wsTabs from './_modules/wstabs';
+
+let $videoBlock = $('#video-tab-block');
+let video = $videoBlock.find('video')[0];
+
+$videoBlock.on(wsTabs.events.on, () => {
+	video.play();
+});
+
+$videoBlock.on(wsTabs.events.off, () => {
+	video.pause();
+});
+					</code>
+				</pre>
+			</div>
+		</div>
+		<div id="video-tab-block" class="wstabs-block" data-wstabs-ns="group-video" data-wstabs-block="2">
+			<div class="wysiwyg">
+				<video controls width="1280" height="720" src="<%- app.module.media('assets/files/video.mp4') %>" poster="<%- app.module.media('assets/files/poster.jpg') %>"></video>
+			</div>
+		</div>
+	</div>
+	<script>
+		(function (window) {
+			document.addEventListener("DOMContentLoaded", function () {
+				var $ = window.jQuery;
+				var $videoBlock = $('#video-tab-block');
+				var video = $videoBlock.find('video')[0];
+
+				$videoBlock.on('wstabs-on', function () {
+					video.play();
+				});
+
+				$videoBlock.on('wstabs-off', function () {
+					video.pause();
+				});
+			});
+		})(window);
+	</script>
+</div>

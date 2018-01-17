@@ -1,0 +1,32 @@
+<%
+	/** примеры Magnific-popup
+	 * @name ui-demo/magnific-popup */
+%>
+<div class="container">
+	<div>
+		<span class="button js-mfp-ajax" data-mfp-src="hidden/callback.php">js-mfp-ajax</span>
+	</div>
+
+	<div>
+		<span class="button js-mfp-inline" data-mfp-src="#demo-mfp-inline">js-mfp-inline</span>
+		<div style="display: none;">
+			<div id="demo-mfp-inline" class="magnific-popup magnific-popup--sm">
+				<div class="container">
+					<div class="title title-tiny">Inline demo</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium aperiam beatae consectetur consequuntur dolor ducimus eius enim, est maxime molestias necessitatibus nostrum nulla quaerat ratione veritatis, voluptate voluptatibus voluptatum.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<span class="button js-mfp-iframe" data-mfp-src="http://www.youtube.com/watch?v=4GUwXxqwyu4">js-mfp-iframe</span>
+	</div>
+
+	<div>
+		<div class="js-mfp-gallery">
+			<span class="button" data-mfp-src="<%- app.module.media('assets/images/placeholders/no-avatar-default.png') %>">js-mfp-gallery 1</span>
+			<span class="button" data-mfp-src="<%- app.module.media('assets/images/placeholders/no-image-default.png') %>">js-mfp-gallery 2</span>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,12 @@
+////
+/// @group js/_modules/mfp/
+////
+
+@import "~magnific-popup/src/css/main";
+// импорты, необходимые для блока magnific-popup
+@import "_settings/functions/em-rem";
+@import "_settings/variables/colors";
+@import "_settings/variables/gutters";
+@import "_settings/variables/breakpoints";
+// стилизация контейнера всплывающего окна
+@import "_blocks/magnific-popup";

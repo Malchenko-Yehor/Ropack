@@ -1,0 +1,82 @@
+////
+/// @group style.scss
+////
+
+// сбор всех утилит (классов хелперов) в одном файле
+// так как эти блоки меняются очень редко
+// это позволит снизить нагрузку на редер основных стилей
+// за счет уменьшения количества лишних действий
+// -------------------------------------------------
+
+@import "_settings/all";
+@import "_settings/mixins/helpers-color";
+@import "_settings/mixins/helpers-cols";
+@import "_settings/mixins/helpers-flex";
+@import "_settings/mixins/helpers-float";
+@import "_settings/mixins/helpers-grid";
+@import "_settings/mixins/helpers-gutter";
+@import "_settings/mixins/helpers-show-hide";
+@import "_settings/mixins/helpers-text";
+
+/// Карта брейкпоинтов для использования в хелперах
+/// @type Map
+$helpers-breakpoints: (
+	// st: map-get($breakpoints, st),
+	xs: map-get($breakpoints, xs),
+	// psw: map-get($breakpoints, psw),
+	sm: map-get($breakpoints, sm),
+	ms: map-get($breakpoints, ms),
+	// psh: map-get($breakpoints, psh),
+	md: map-get($breakpoints, md),
+	def: map-get($breakpoints, def),
+	lg: map-get($breakpoints, lg)
+	// xl: map-get($breakpoints, xl),
+	// mg: map-get($breakpoints, mg),
+	// dt: map-get($breakpoints, dt)
+);
+
+/// Карта отступов для использования в хелперах
+/// @type Map
+$helpers-gutters: (
+	none: map-get($gutters, none),
+	sm: map-get($gutters, sm),
+	ms: map-get($gutters, ms),
+	md: map-get($gutters, md),
+	def: map-get($gutters, def),
+	lg: map-get($gutters, lg),
+	xl: map-get($gutters, xl)
+	// mg: map-get($gutters, mg),
+	// dt: map-get($gutters, dt)
+);
+
+/// Карта цветов для использования в хелперах
+/// @type Map
+$helpers-colors: (
+	// back: map-get($colors, back),
+	// bg: map-get($colors, bg),
+	// text: map-get($colors, text),
+	// link: map-get($colors, link),
+	// link-visited: map-get($colors, link-visited),
+	// link-hover: map-get($colors, link-hover),
+	// link-active: map-get($colors, link-active),
+	primary: map-get($colors, primary),
+	secondary: map-get($colors, secondary),
+	accent: map-get($colors, accent),
+	success: map-get($colors, success),
+	info: map-get($colors, info),
+	warning: map-get($colors, warning),
+	danger: map-get($colors, danger)
+);
+
+// helpers
+@include helpers-color($helpers-colors);
+@include helpers-grid(12, $helpers-breakpoints, $helpers-gutters);
+@include helpers-cols(5, $helpers-breakpoints);
+@include helpers-flex($helpers-breakpoints);
+@include helpers-float(/*$helpers-breakpoints*/); // sass-lint:disable-line no-css-comments
+@include helpers-gutter($helpers-breakpoints, $helpers-gutters);
+@include helpers-text(/*$helpers-breakpoints*/); // sass-lint:disable-line no-css-comments
+@include helpers-show-hide($helpers-breakpoints);
+
+// стили для печати
+@import "_system/print";

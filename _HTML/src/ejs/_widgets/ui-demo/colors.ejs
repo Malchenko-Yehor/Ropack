@@ -1,0 +1,44 @@
+<%
+	/** примеры цветов
+	 * @name ui-demo/colors */
+
+	const colors = [
+		'primary',
+		'secondary',
+		'accent',
+		'success',
+		'info',
+		'warning',
+		'danger'
+	];
+%>
+<div class="container">
+	<style>
+		.demo-colors em {
+			font-style: normal;
+			color: #000;
+		}
+		.demo-colors span {
+			display: inline-block;
+			vertical-align: top;
+			padding: 1rem;
+		}
+	</style>
+	<div class="demo-colors grid grid--1 grid--md-2">
+		<% colors.forEach(color => { %>
+			<%
+				let colorClass = '_color-' + color;
+				let bgClass = '_bgcolor-' + color;
+				let fillClass = '_fill-' + color;
+			%>
+			<div class="gcell">
+				<span class="<%- bgClass %>"><em><%- bgClass %></em></span>
+				<span class="<%- colorClass %>"><%- colorClass %></span>
+				<span class="<%- fillClass %>">
+					<%- new app.el.SvgIcon('icon-wezom') %>
+					<%- fillClass %>
+				</span>
+			</div>
+		<% }) %>
+	</div>
+</div>

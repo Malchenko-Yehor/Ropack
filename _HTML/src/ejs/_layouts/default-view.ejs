@@ -1,0 +1,20 @@
+<%
+	/** @namespace app
+	 * @see module:core
+	 * @see module:docs */
+
+	/** Стандартный лейаут страниц
+	 * @name default-view */
+
+	/** установка лейаута */
+	app.setLayout('_base.ejs');
+%>
+<div class="wrapper">
+	<div class="section _pb-xl _flex-grow">
+		<%- app.widget('header.ejs') %>
+		<%- app.body %>
+	</div>
+	<div class="section">
+		<%- app.widget('footer.ejs') %>
+	</div>
+</div>

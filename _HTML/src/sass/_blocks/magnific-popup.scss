@@ -1,0 +1,66 @@
+////
+/// @group _blocks/
+////
+
+/// Description
+.magnific-popup {
+	position: relative;
+	max-width: 96%;
+	margin: 1rem auto;
+	background-color: #fff;
+	padding: map-get($gutters, def);
+	border-radius: map-get($gutters, sm);
+
+	&--sm {
+		width: map-get($breakpoints, sm);
+	}
+}
+
+/// mfp-animate-zoom-in
+.mfp-animate-zoom-in {
+	$duration: .2s;
+	$duration-bg: .3s;
+
+	.mfp-iframe-scaler iframe, // sass-lint:disable-line force-element-nesting
+	.mfp-figure,
+	.mfp-arrow,
+	.magnific-popup {
+		opacity: 0;
+		transform: scale(.8);
+		transition: transform $duration ease-in-out, opacity $duration ease-in-out;
+	}
+
+	&.mfp-ready {
+		.mfp-iframe-scaler iframe, // sass-lint:disable-line force-element-nesting
+		.mfp-figure,
+		.mfp-arrow,
+		.magnific-popup {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	&.mfp-removing {
+		.mfp-iframe-scaler iframe, // sass-lint:disable-line force-element-nesting
+		.mfp-figure,
+		.mfp-arrow,
+		.magnific-popup {
+			opacity: 0;
+			transform: scale(.8);
+		}
+	}
+
+	&.mfp-bg {
+		opacity: 0;
+		transition: opacity $duration-bg ease-in-out;
+
+		&.mfp-ready {
+			opacity: .8;
+		}
+
+		&.mfp-removing {
+			opacity: 0;
+		}
+	}
+}
+

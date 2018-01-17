@@ -1,0 +1,75 @@
+<%
+	/** Шаблон страницы с демонстрацией SVG иконок
+	 * @name ui-svg.ejs */
+
+	/** установка лейаута страницы */
+	app.setLayout('default-view.ejs');
+
+	/** расширение глобального объекта app
+	 * @see module:core */
+	app.require('core.js')(app);
+
+	// выгружаем инструменты
+	const {currentView, svg} = app.data;
+	const {SvgIcon} = app.el;
+%>
+<div class="section">
+	<div class="container _ptb-lg">
+		<div class="title"><%- currentView.title %></div>
+	</div>
+	<div class="container container--full">
+
+		<style>
+			.svg-sprite-icon {
+				padding: 5%;
+				border-radius: .3rem;
+				background-color: #eee;
+			}
+			.svg-sprite-icon__top {
+				position: relative;
+				width: 100%;
+				padding-top: 100%;
+				background-color: #fff;
+			}
+			.svg-sprite-icon__svg {
+				position: absolute;
+				top: 5%;
+				left: 5%;
+				width: 90%;
+				height: 90%;
+				border: 1px dashed #ddd;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.svg-sprite-icon__svg > svg {
+				width: 100%;
+				height: 100%;
+			}
+			.svg-sprite-icon__name {
+				margin-top: 5%;
+				text-align: center;
+				max-width: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		</style>
+
+		<div class="grid grid--space-sm grid--4 grid--md-6 grid--def-10">
+			<% for (let key in svg.list) { %>
+				<% let icon = svg.list[key] %>
+				<div class="_cell">
+					<div class="svg-sprite-icon">
+						<div class="svg-sprite-icon__top">
+							<div class="svg-sprite-icon__svg">
+								<%- new SvgIcon(key) %>
+							</div>
+						</div>
+						<div class="svg-sprite-icon__name" title="<%- key %>"><%- key %></div>
+					</div>
+				</div>
+			<% } %>
+		</div>
+	</div>
+</div>

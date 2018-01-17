@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Требуется аутентификация"
+AuthUserFile /var/www/wezomnet/.htpasswd
+require valid-user
+AddDefaultCharset UTF-8

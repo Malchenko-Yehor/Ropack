@@ -1,0 +1,20 @@
+{
+	"app.module.__": {
+		"title": "<b>app.module.__</b> - Тектовые переводы"
+	},
+	"app.module.media": {
+		"title": "<b>app.module.media</b> - Обращение к медиа файлам"
+	},
+	"app.module.insert": {
+		"title": "<b>app.module.insert</b> - Подключение текстового контента из внешних файлов"
+	},
+	"app.module.comment": {
+		"title": "<b>app.module.comment</b> - Генерация комметариев"
+	},
+	"app.module.md2html": {
+		"title": "<b>app.module.md2html</b> - Конвертация <code>markdown</code> в <code>html</code>"
+	},
+	"app.el": {
+		"title": "<b>app.el</b> - экземпляры HTML/SVG элементов"
+	}
+}

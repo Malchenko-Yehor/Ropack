@@ -1,0 +1,54 @@
+////
+/// @group _blocks/
+////
+
+/// Description
+.form {
+	position: relative;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+	position: relative;
+}
+
+.form-controller {
+	position: relative;
+}
+
+.form-input {
+	border-width: 1px;
+
+	&::placeholder {
+		color: #ccc;
+		opacity: 1;
+	}
+}
+
+.form-textarea {
+	&::placeholder {
+		color: #ccc;
+		opacity: 1;
+	}
+}
+
+//.form-select {
+//	// код
+//}
+
+.form-input,
+.form-textarea,
+.form-select {
+	&.has-error {
+		background-color: lighten(map-get($colors, danger), 45%);
+		border-color: map-get($colors, danger);
+	}
+}
+
+.form-flag {
+	&__input {
+		&.has-error ~ .form-flag__value {
+			color: map-get($colors, danger);
+		}
+	}
+}
