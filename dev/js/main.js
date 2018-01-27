@@ -1,5 +1,50 @@
 
 $(document).ready(function () {
+
+  // Animated bar
+  $('.animated-bar').on('inview', function(event, isInView) {
+  if (isInView) {
+    $(this).playKeyframe({
+    name: 'animated-bar', // name of the keyframe you want to bind to the selected element
+    duration: '1s', // [optional, default: 0, in ms] how long you want it to last in milliseconds
+    timingFunction: 'linear', // [optional, default: ease] specifies the speed curve of the animation
+    // iterationCount: 'infinite', //[optional, default:1]  how many times you want the animation to repeat
+    fillMode: 'forwards', //[optional, default: 'forward']  how to apply the styles outside the animation time, default value is forwards
+  });
+  }
+});
+
+  $.keyframe.define([{
+    name: 'animated-bar',
+    '0%' : {
+      'transform': 'translateY(-200px) scale(0)',
+      'opacity': '0'
+    },
+
+    '50%' : {
+      'transform': 'translateY(-200px) scale(1,80)',
+      'opacity': '1'
+    },
+
+    '98%' : {
+      'transform': 'translateY(0) scale(1)',
+      'opacity': '1'
+    },
+
+    '100%' : {
+      'opacity' : '0'
+    }
+  }]);
+
+  // $('.animated-bar').playKeyframe({
+  //   name: 'animated-bar', // name of the keyframe you want to bind to the selected element
+  //   duration: '1s', // [optional, default: 0, in ms] how long you want it to last in milliseconds
+  //   timingFunction: 'linear', // [optional, default: ease] specifies the speed curve of the animation
+  //   iterationCount: 'infinite', //[optional, default:1]  how many times you want the animation to repeat
+  //   fillMode: 'forwards', //[optional, default: 'forward']  how to apply the styles outside the animation time, default value is forwards
+  // });
+
+
   var menu = new MENU (
     ".menu",
     [".navigation__burger", ".menu__burger"],

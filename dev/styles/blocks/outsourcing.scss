@@ -28,7 +28,14 @@
     padding-top: 309px;
   }
 
+  &__animated-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   &__title {
+    position: relative;
     color: #1f2135;
     font-family: "Ristretto-pro Regular", sans-serif;
     font-size: 96px;

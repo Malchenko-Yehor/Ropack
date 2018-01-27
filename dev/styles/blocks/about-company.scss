@@ -10,6 +10,11 @@
   background-position: top right, top right;
   background-size: contain;
 
+  &__animated-bar {
+    position: absolute;
+    top: 0;
+  }
+
   &__scroll-menu {
     position: absolute;
     top: calc(79vw * (217/1521));
@@ -36,15 +41,9 @@
   }
 
   &__content {
+    position: relative;
     margin-top: calc((100vw - 21vw) * 0.275);
     margin-left: (281/1521) * 100%;
-  }
-
-  &__bar {
-    width: 2px;
-    height: 122px;
-    background-color: #e90e37;
-    margin-bottom: rem(22);
   }
 
   &__title {

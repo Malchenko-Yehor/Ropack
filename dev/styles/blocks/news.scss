@@ -42,7 +42,14 @@
     align-content: flex-end;
   }
 
+  &__animated-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   &__title {
+    position: relative;
     font-family: "Ristretto-pro Regular";
     font-size: 96px;
     font-weight: 400;
