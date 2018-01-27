@@ -1,0 +1,12 @@
+.svg-anim__light-grey, .svg-anim__black {
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s; }
+
+.svg-anim:hover .svg-anim__light-grey {
+  fill: #e90e37; }
+
+.svg-anim:hover .svg-anim__black {
+  fill: #fff; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN2Zy1hbmltLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLDRCQUFvQjtFQUFwQix1QkFBb0I7RUFBcEIsb0JBQW9CLEVBQUU7O0FBRXhCO0VBQ0UsY0FBYyxFQUFFOztBQUVsQjtFQUNFLFdBQVcsRUFBRSIsImZpbGUiOiJibG9ja3Mvc3ZnLWFuaW0uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnN2Zy1hbmltX19saWdodC1ncmV5LCAuc3ZnLWFuaW1fX2JsYWNrIHtcbiAgdHJhbnNpdGlvbjogYWxsIC41czsgfVxuXG4uc3ZnLWFuaW06aG92ZXIgLnN2Zy1hbmltX19saWdodC1ncmV5IHtcbiAgZmlsbDogI2U5MGUzNzsgfVxuXG4uc3ZnLWFuaW06aG92ZXIgLnN2Zy1hbmltX19ibGFjayB7XG4gIGZpbGw6ICNmZmY7IH1cbiJdfQ== */

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROPACK</title>
+  
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/css/swiper.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/static/main.css">
+</head>
+<body>
+  <div class="wrapper">
+  
+  <!-- MENU -->
+  <div class="menu">
+    <div class="menu__container">
+      <div class="menu__left-side">
+        <ul class="menu__submenu">
+        </ul>
+        <ul class="menu__submenu">
+        </ul>
+        <ul class="menu__submenu">
+        </ul>
+        <ul class="menu__submenu">
+          <li><a href="#">test</a></li>
+          <li><a href="#">test</a></li>
+          <li><a href="#">test</a></li>
+          <li><a href="#">test</a></li>
+          <li><a href="#">test</a></li>
+        </ul>
+        <ul class="menu__submenu">
+        </ul>
+        <ul class="menu__submenu">
+        </ul>
+        <ul class="menu__submenu">
+        </ul>
+
+      </div>
+
+      <div class="menu__right-side">
+        <ol class="ordered-list-custom menu__ordered-list">
+          <li class="ordered-list-custom__item"><a href="#">ГЛАВНАЯ</a></li>
+          <li class="ordered-list-custom__item ordered-list-custom__item--not-first"><a href="#">О КОМПАНИИ</a></li>
+          <li class="ordered-list-custom__item ordered-list-custom__item--not-first"><a href="#">ПАРТНЁРЫ</a></li>
+          <li class="ordered-list-custom__item ordered-list-custom__item--not-first"><a>ОТРАСЛЕВЫЕ РЕШЕНИЯ</a></li>
+          <li class="ordered-list-custom__item ordered-list-custom__item--not-first"><a href="#">АУТСОРСИНГ</a></li>
+          <li class="ordered-list-custom__item ordered-list-custom__item--not-first"><a href="#">НОВОСТИ</a></li>
+          <li class="ordered-list-custom__item ordered-list-custom__item--not-first"><a href="#">КОНТАКТЫ</a></li>
+        </ol>
+      </div>
+
+      <div class="menu__burger"></div>
+    </div>
+  </div>
+
+  <!-- CALLBACK -->
+  <div class="callback">
+    <div class="callback__container">
+      <div class="callback__left-side">
+
+      </div>
+
+      <div class="callback__right-side">
+        <div class="callback__wrapper">
+          <div class="callback__title">
+            ОБРАТНЫЙ ЗВОНОК
+          </div>
+          <form name="callback" type="post">
+            <div class="callback__input">
+              <label for="callback-company">Имя</label>
+              <input id="callback-company" type="text" name="company">
+            </div>
+            
+            <div class="callback__input">
+              <label for="callback-phone">Контактный телефон</label>
+              <input id="callback-phone" type="text" name="phone">
+            </div>
+            
+            <input class="callback__submit" type="submit" name="submit" value="ПЕРЕЗВОНИТЕ МНЕ">
+          </form>
+        </div>
+      </div>
+
+      <div class="callback__burger"></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="navigation">
+    <img class="navigation__logo" src="styles/images/navigation__logoBig.png" alt="logo">
+    <img class="navigation__logo-small" src="styles/images/navigation__logoSmall.png" alt="logo">
+
+     <ul class="navigation__language-choose">
+      <li><a href="#" class="is-active">RUS</a></li>
+      <li><a href="#">UKR</a></li>
+      <li><a href="#">ENG</a></li>
+    </ul>
+
+    <div class="navigation__burger"></div>
+  </nav>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="header__logo">
+      <div>
+        <strong>ROPACK</strong>
+        <p>production equipment</p>
+      </div>
+    </div>
+
+    <div class="header__call">
+      <div class="header__phone-number">
+        +37 (048) 737 43 41
+      </div>
+      <button class="header__callback">МЫ ВАМ ПЕРЕЗВОНИМ</button>
+    </div>
+  </header>
+
+  <!-- ABOUT COMPANY -->
+  <div class="about-company">
+    <img src="styles/images/about-company__logo.png" alt="" class="about-company__logo-picture">
+    <div class="about-company__logo-text">ROPACK</div>
+    <div class="about-company__content">
+      <div class="about-company__bar"></div>
+      <div class="about-company__title">О КОМПАНИИ</div>
+      <div class="about-company__text">
+        Занимаемся поставками упаковочного и технологического оборудования
+        оригинальных запасных частей для пищевой, фармацевтической
+        косметической, химической промышленности.
+      </div>  
+      <a class="about-company__link link" href="#"><span>ПОДРОБНЕЕ О КОМПАНИИ</span></a>
+    </div>
+    <nav class="about-company__scroll-menu scroll-menu">
+      <div class="scroll-menu__title">О КОМПАНИИ</div>
+      <a href="#.about-company" class="scroll-menu__item is-active"></a>
+      <a href="#.sections" class="scroll-menu__item"></a>
+      <a href="#.advantages" class="scroll-menu__item"></a>
+      <a href="#.partners" class="scroll-menu__item"></a>
+      <a href="#.outsourcing" class="scroll-menu__item"></a>
+      <a href="#.news" class="scroll-menu__item"></a>
+      <div class="scroll-menu__bar"></div>
+    </nav>
+  </div>
+
+  <!-- SECTIONS -->
+  <div class="sections">
+
+    <!-- SCROLL MENU -->
+    <nav class="sections__scroll-menu scroll-menu">
+      <div class="scroll-menu__title">ОТРАСЛИ</div>
+      <a href="#.about-company" class="scroll-menu__item"></a>
+      <a href="#.sections" class="scroll-menu__item is-active"></a>
+      <a href="#.advantages" class="scroll-menu__item"></a>
+      <a href="#.partners" class="scroll-menu__item"></a>
+      <a href="#.outsourcing" class="scroll-menu__item"></a>
+      <a href="#.news" class="scroll-menu__item"></a>
+    </nav>
+
+    <div class="sections__holder">
+
+      <div class="sections__container">
+        <div class="sections__spinner-big"></div>
+        <div class="sections__spinner-small"></div>
+        <div class="sections__circle-big"></div>
+        <div class="sections__circle-medium"></div>
+        <div class="sections__circle-small"></div>
+        <div class="sections__title">ОТРАСЛИ</div>
+      </div>
+
+
+      <div class="sections__wrapper">
+        <a class="sections__item"> 
+          <svg class="sections__svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="115" viewBox="0 0 115 115"><defs><path id="25pya" d="M174 1481v-119h119v119zm6-59a54 54 0 1 0 108 0 54 54 0 0 0-108 0z"/><path id="25pyb" d="M234 1368a54 54 0 1 1 0 108 54 54 0 0 1 0-108z"/><clipPath id="25pyc"><use class="_white" fill="#fff" xlink:href="#25pya"/></clipPath></defs><g><g transform="translate(-176 -1364)"><use class="_light-grey" fill="#f7f7f7" xlink:href="#25pyb"/><use class="_white" fill="#fff" fill-opacity="0" stroke="#cedde2" stroke-dasharray="120 16 2 16 16 40" stroke-linecap="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#25pyc&quot;)" xlink:href="#25pyb"/></g></g><defs><path id="g675a" d="M264 1236.84a6.78 6.78 0 0 1-6.77 6.77h-2.9V1262h-1.94v-18.39h-1.94V1262h-1.93v-18.39h-27.1V1262H204v-1.94h15.48v-56.12H204V1202h17.42v14.52h15.48v13.54h1.94v-13.54h17.42v13.54h.97a6.78 6.78 0 0 1 6.77 6.78zm-23.23-6.78h13.55v-11.6h-5.8v6.77h-1.94v-6.78h-5.8zm-19.35 0h13.55v-11.6h-5.8v6.77h-1.94v-6.78h-5.81zm40.64 6.78a4.84 4.84 0 0 0-4.83-4.84h-2.9v1.94h-1.94V1232h-5.81v1.94h-1.93V1232h-5.81v1.94h-1.94V1232h-5.8v1.94h-1.94V1232h-5.8v1.94h-1.94v5.8h1.93v1.94h5.81v-1.94h1.94v1.94h5.8v-1.94h1.94v1.94h5.8v-1.94h1.94v1.94h5.8v-1.94h1.94v1.94h2.9a4.84 4.84 0 0 0 4.84-4.84zm-1.93 0a2.9 2.9 0 1 1-5.81 0 2.9 2.9 0 0 1 5.8 0zm-1.94 0a.97.97 0 1 0-1.93 0 .97.97 0 0 0 1.93 0zm-5.8 0a2.9 2.9 0 1 1-5.82 0 2.9 2.9 0 0 1 5.82 0zm-1.94 0a.97.97 0 1 0-1.93 0 .97.97 0 0 0 1.93 0zm-5.8 0a2.9 2.9 0 1 1-5.82 0 2.9 2.9 0 0 1 5.82 0zm-1.94 0a.97.97 0 1 0-1.94 0 .97.97 0 0 0 1.94 0zm-5.8 0a2.9 2.9 0 1 1-5.82 0 2.9 2.9 0 0 1 5.81 0zm-1.94 0a.97.97 0 1 0-1.94 0 .97.97 0 0 0 1.94 0zm-5.8 0a2.9 2.9 0 1 1-5.82 0 2.9 2.9 0 0 1 5.81 0zm-1.94 0a.97.97 0 1 0-1.94 0 .97.97 0 0 0 1.94 0zm-23.23-8.71v-1.94a8.72 8.72 0 0 0 0-17.42v-1.93c5.87 0 10.65 4.77 10.65 10.64 0 5.87-4.78 10.65-10.65 10.65zm0-11.61h1.94v1.93H204zm3.87 0h1.94v1.93h-1.94zm5.8 27.1H204v-1.94h7.74v-6.78H204v-1.93h9.68zm-9.67 1.93h1.94v1.93H204zm3.87 0h1.94v1.93h-1.94zm3.87 0h1.94v1.93h-1.94z"/></defs><g><g transform="translate(-173 -1175)"><use class="_black" fill="#1f2135" xlink:href="#g675a"/></g></g></svg>
+          <span>ПИЩЕВАЯ ПРОМ.</span>
+          <svg class="sections__svg-line sections__svg-line--left-top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="303" height="193" viewBox="0 0 303 193"><defs><path id="1asra" d="M867 1425l-199-189H568"/><clipPath id="1asrb"><use fill="#fff" xlink:href="#1asra"/></clipPath></defs><g><g transform="translate(-566 -1233)"><use class="_anim" fill="#fff" fill-opacity="0" stroke="#c2d1d5" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#1asrb&quot;)" xlink:href="#1asra"/></g></g></svg>
+        </a>
+      </div>
+
+      <div class="sections__wrapper sections__wrapper--go-right">
+        <a class="sections__item">
+          <svg class="sections__svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="114" height="115" viewBox="0 0 114 115"><defs><path id="js60a" d="M1346 1291v-119h118v119zm5-59a54 54 0 1 0 108 0 54 54 0 0 0-108 0z"/><path id="js60b" d="M1405 1178a54 54 0 1 1 0 108 54 54 0 0 1 0-108z"/><path id="js60d" d="M1435 1260.06v1.94h-60v-1.94h20.32v-4.83h1.94v4.83h6.77v-11.6h-1.93v3.86h-11.62v-3.87h-1.93v-1.93h15.48v-3.88h-15.48v-1.93h24.2v1.93h-.98v1.94h4.84v-12.24a2.28 2.28 0 0 0-2.27-2.28h-1.6v2.9h-8.7v-2.9h-5.13l3.66 2.06-.95 1.69-1.46-.82v5.78h-6.77v-4.89l-2.57 4.29-6.5-3.9 3.26-5.44v-2.92l-1.44-.81.95-1.69 5.33 3v-10.86h-1.94v-1.94h3.87V1202h6.78v11.61h4.84c1.59 0 2.99.78 3.87 1.97v-.03h2.24l4.05 2.9a24.3 24.3 0 0 1 9.09 26.86l-2.84 9.23 1.72 5.52zm-34.84-11.6h-7.74v1.93h7.74zm2.9-30a2.9 2.9 0 1 0 5.82-.02 2.9 2.9 0 0 0-5.82.01zm-6.77-12.59h2.9v-1.93h-2.9zm0 7.74h2.9v-5.8h-2.9zm-4.23 18.72l-3.18-1.9-1.9 3.17 3.17 1.91zm1.6-1.3h3.02l-7.16-4.03v1.55zm4.57 1.94h-2.9v3.87h2.9zm5.8-10.1a4.79 4.79 0 0 1-1.91-7.33h-7.77v1.94h4.84v1.94h-4.84v8.08l1.12.63h8.56zm14.52 9.47v13.01a4.3 4.3 0 0 1 1.66 2.26l1.14 3.67 2.02-6.54a22.36 22.36 0 0 0-8.36-24.72l-3.55-2.54h-.75a4.83 4.83 0 0 1-4.74 5.81v7.74h4.84v-2.9h3.53a4.22 4.22 0 0 1 4.2 4.21zm-6.78 25.79h-5.8v1.93h5.8zm.73-11.61h-2.66v-3.88h-3.87v13.55h5.8v-7.3c0-.88.27-1.7.73-2.37zm9.57 13.54l-3.71-11.87a2.38 2.38 0 0 0-4.65.7v11.17z"/><clipPath id="js60c"><use class="_white" fill="#fff" xlink:href="#js60a"/></clipPath></defs><g><g transform="translate(-1348 -1174)"><use class="_light-grey" fill="#f7f7f7" xlink:href="#js60b"/><use class="white" fill="#fff" fill-opacity="0" stroke="#cedde2" stroke-dasharray="120 16 2 16 16 40" stroke-linecap="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#js60c&quot;)" xlink:href="#js60b"/></g><g transform="translate(-1348 -1174)"><use class="_black" fill="#1f2135" xlink:href="#js60d"/></g></g></svg>
+          <span>ЛАБОРАТОРНОЕ <br> ОБОРУДОВАНИЕ</span>
+          <svg class="sections__svg-line sections__svg-line--right-top" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="303" height="194" viewBox="0 0 303 194"><defs><path id="kv15a" d="M1051 1425.28L1250 1236h101"/><clipPath id="kv15b"><use fill="#fff" xlink:href="#kv15a"/></clipPath></defs><g><g transform="translate(-1049 -1234)"><use class="_anim" fill="#fff" fill-opacity="0" stroke="#c2d1d5" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#kv15b&quot;)" xlink:href="#kv15a"/></g></g></svg>
+        </a>
+      </div>
+
+      <div class="sections__wrapper">    
+        <a class="sections__item">
+          <svg class="sections__svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="115" viewBox="0 0 115 115"><defs><path id="xgrpa" d="M174 1481v-119h119v119zm6-59a54 54 0 1 0 108 0 54 54 0 0 0-108 0z"/><path id="xgrpb" d="M234 1368a54 54 0 1 1 0 108 54 54 0 0 1 0-108z"/><path id="xgrpd" d="M228.17 1392h1.93v1.94h-1.93zm-1.77.73l1.37 1.37-1.37 1.37-1.37-1.37zm-2.1 3.14h1.94v1.94h-1.94zm2.1 5.08l-1.37-1.37 1.37-1.37 1.37 1.37zm1.77-1.2h1.93v1.93h-1.93zm3.7-1.54l1.37 1.37-1.37 1.36-1.37-1.36zm.17-2.34h1.93v1.94h-1.93zm-.17-3.14l1.37 1.37-1.37 1.37-1.37-1.37zm-21.1 2.17h1.93v1.94h-1.93zm-1.77.74l1.37 1.36-1.37 1.37-1.37-1.37zm-2.1 3.13h1.93v1.94h-1.93zm2.1 5.08l-1.37-1.37 1.37-1.37 1.37 1.37zm1.77-1.2h1.93v1.93h-1.93zm3.7 1.2l-1.37-1.37 1.37-1.37 1.37 1.37zm.16-5.08h1.94v1.94h-1.94zm-.16-3.13l1.37 1.36-1.37 1.37-1.37-1.37zm19.5 7.97h1.93v1.94h-1.93zm1.93 1.94h1.94v1.93h-1.94zm1.94-1.94h1.93v1.94h-1.93zm-1.94-1.93h1.94v1.93h-1.94zm-13.53 35.8a4.84 4.84 0 1 1-9.68 0 4.84 4.84 0 0 1 9.68 0zm-1.93 0a2.9 2.9 0 1 0-5.82 0 2.9 2.9 0 0 0 5.82 0zm43.5 0v1.94h-3.87v6.77a5.81 5.81 0 0 1-11.6 0v-6.77h-7.46a17.43 17.43 0 0 1-16.7 12.58c-7.92 0-14.61-5.32-16.71-12.58H204v-1.94h3.16a17.32 17.32 0 0 1 11.34-19.33v-12.6h-1.93v-1.94h15.47v1.94h-1.94v12.6a17.32 17.32 0 0 1 11.34 19.33h7.03v-20.32h-1.93v-1.93H262v1.93h-1.94v20.32zm-52.44-11.6h25.6a15.4 15.4 0 0 0-8.25-6.1l-.68-.21v-14.02h-7.73v14.02l-.69.21a15.4 15.4 0 0 0-8.25 6.1zm16.85 1.93a2.9 2.9 0 0 0 2.72 1.93 2.9 2.9 0 0 0 2.72-1.93zm11.42 6.77c0-2.42-.56-4.71-1.55-6.77h-2.41a4.84 4.84 0 0 1-9.48 0H210.4a15.5 15.5 0 0 0 13.92 22.26 15.5 15.5 0 0 0 15.46-15.49zm18.37 0h-7.73v11.61a3.87 3.87 0 0 0 7.73 0zm0-17.42h-7.73v15.48h7.73zm-10.5-14.51c-.37-.33-.71-.66-1.02-.99-1.67-1.77-2.2-3.23-1.56-4.34.64-1.1 2.17-1.38 4.54-.82.43.1.9.24 1.36.4.6-2.8 1.68-4.9 3.31-4.9 1.64 0 2.72 2.1 3.32 4.9.47-.16.92-.3 1.36-.4 2.37-.56 3.9-.28 4.53.82.64 1.1.12 2.57-1.56 4.34-.3.33-.64.66-1 .99.36.32.7.65 1 .98 1.68 1.77 2.2 3.23 1.56 4.34-.42.73-1.24 1.1-2.43 1.1-.6 0-1.3-.1-2.1-.28-.44-.1-.9-.24-1.36-.4-.6 2.8-1.68 4.9-3.32 4.9-1.63 0-2.72-2.1-3.31-4.9-.47.16-.93.3-1.36.4-.8.18-1.5.28-2.1.28-1.2 0-2.01-.37-2.44-1.1-.63-1.1-.1-2.57 1.56-4.34a17 17 0 0 1 1.02-.98zm11.76 1.24c-.42.32-.87.64-1.34.95-.03.55-.08 1.1-.15 1.62 2.25.77 3.66.78 3.9.53.09-.33-.62-1.54-2.41-3.1zm-1.49-5.06a29 29 0 0 1 .15 1.62c.47.31.91.63 1.34.95 1.79-1.57 2.5-2.78 2.4-3.12-.08-.08-.31-.14-.67-.14-.65 0-1.76.2-3.22.69zm-2.15 8.88c-.49-.2-.99-.44-1.49-.68l-1.48.68c.46 2.33 1.16 3.55 1.5 3.65.32-.1 1.01-1.32 1.47-3.65zm-2.97-10.13c.48.2.98.44 1.48.69.5-.25 1-.48 1.49-.69-.46-2.33-1.16-3.55-1.5-3.65-.33.1-1.01 1.32-1.47 3.65zm-.45 5.07c0 .38 0 .74.02 1.1a32.2 32.2 0 0 0 1.91 1.1 32.65 32.65 0 0 0 1.92-1.1 33.7 33.7 0 0 0 0-2.21l-.95-.57c-.33-.2-.65-.36-.97-.53l-.96.53a33 33 0 0 0-.95.57 34 34 0 0 0-.02 1.1zm-3.2-1.25c.43-.32.88-.64 1.34-.95.04-.54.09-1.09.16-1.62a10.79 10.79 0 0 0-3.2-.67c-.38 0-.62.05-.71.14-.08.33.63 1.54 2.42 3.1zm-2.4 5.61c.25.24 1.65.23 3.9-.54-.07-.54-.12-1.08-.16-1.63-.46-.31-.9-.63-1.33-.95-1.79 1.57-2.5 2.78-2.4 3.12z"/><clipPath id="xgrpc"><use class="_white" fill="#fff" xlink:href="#xgrpa"/></clipPath></defs><g><g transform="translate(-176 -1364)"><use class="_light-grey" fill="#f7f7f7" xlink:href="#xgrpb"/><use class="_white" fill="#fff" fill-opacity="0" stroke="#cedde2" stroke-dasharray="120 16 2 16 16 40" stroke-linecap="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#xgrpc&quot;)" xlink:href="#xgrpb"/></g><g transform="translate(-176 -1364)"><use class="_black" fill="#1f2135" xlink:href="#xgrpd"/></g></g></svg>
+          <span>ХИМИЧЕСКАЯ ПРОМ.<br> МАШИНОСТРОЕНИЕ</span>
+          <div class="sections__svg-line sections__svg-line--left-center"></div>
+        </a>
+      </div>
+      
+      <div class="sections__wrapper sections__wrapper--go-right">
+        <a class="sections__item">
+          <svg class="sections__svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="115" viewBox="0 0 115 115"><defs><path id="5urwa" d="M1345 1484v-119h119v119zm6-59a54 54 0 1 0 108 0 54 54 0 0 0-108 0z"/><path id="5urwb" d="M1405 1371a54 54 0 1 1 0 108 54 54 0 0 1 0-108z"/><path id="5urwd" d="M1435 1445.32v5.8h-2.54c-1.15.95-5.5 3.88-14.88 3.88s-13.73-2.93-14.88-3.87h-2.54v-3.87H1375v-39.47l.73-.18a4.14 4.14 0 0 0 3.14-4.02V1395h10.94l.24.16c.03.02 2.75 1.78 7.2 1.78 4.5 0 7.19-1.76 7.21-1.78l.25-.16h10.94v8.59c0 1.9 1.29 3.56 3.13 4.02l.74.18v21.26a2.9 2.9 0 0 1 1.88 2.25 15.52 15.52 0 0 1 11.62 14.02zm-16.45-14.51h-1.94a.97.97 0 0 0-.96.96v7.75h-1.94v-6.22a13.6 13.6 0 0 0-9.64 12.02h27.02a13.6 13.6 0 0 0-9.64-12.02v6.22h-1.93v-7.75a.97.97 0 0 0-.97-.96zm-20.32-5.81v6.77h13.98c.5-.18 1.02-.34 1.55-.47a2.9 2.9 0 0 1 2.85-2.43h.97V1425zm19.35-1.94v-3.87h-19.35v3.87zm-19.35 10.65v3.87h6.56c1.02-1.5 2.3-2.8 3.78-3.87zm0-21.87v5.42h19.35v-8a6.07 6.07 0 0 1-3.87-5.67v-6.65h-7.8c-.5 6.92-6.3 13.44-7.68 14.9zm-1.94 21.87h-19.35v3.87h1.93v1.94h-1.93v5.8h19.35v-5.8h-15.48v-1.94h15.48zm0-8.71h-19.35v6.77h19.35zm0-5.8h-19.35v3.86h19.35zm0-7.36c-1.38-1.46-7.18-7.98-7.7-14.9h-7.78v6.65a6.07 6.07 0 0 1-3.87 5.66v8h19.35zm.97-1.81c1.67-1.87 5.88-7.06 6.64-12.44a17.21 17.21 0 0 1-6.64 1.28c-2.97 0-5.24-.69-6.65-1.28.76 5.39 4.97 10.57 6.65 12.44zm4.88 35.3a15.4 15.4 0 0 1 1.54-5.81h-5.45v5.8zm26.5 5.8h-22.08c2.18.94 5.72 1.93 11.02 1.93 5.36 0 8.9-.99 11.05-1.93zm4.42-3.87h-30.96v1.93h30.96z"/><clipPath id="5urwc"><use class="_white" fill="#fff" xlink:href="#5urwa"/></clipPath></defs><g><g transform="translate(-1347 -1367)"><use class="_light-grey" fill="#f7f7f7" xlink:href="#5urwb"/><use class="_white" fill="#fff" fill-opacity="0" stroke="#cedde2" stroke-dasharray="120 16 2 16 16 40" stroke-linecap="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#5urwc&quot;)" xlink:href="#5urwb"/></g><g transform="translate(-1347 -1367)"><use class="_black" fill="#1f2135" xlink:href="#5urwd"/></g></g></svg>
+          <span>СПЕЦ. ОДЕЖДА</span>
+          <div class="sections__svg-line sections__svg-line--right-center"></div>
+        </a>
+      </div>
+
+      <div class="sections__wrapper">
+        <a class="sections__item">
+          <svg class="sections__svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="115" viewBox="0 0 115 115"><defs><path id="6pnna" d="M175 1671v-119h119v119zm6-59a54 54 0 1 0 108 0 54 54 0 0 0-108 0z"/><path id="6pnnb" d="M235 1558a54 54 0 1 1 0 108 54 54 0 0 1 0-108z"/><path id="6pnnd" d="M213.7 1610.06h1.95v1.94h-1.94zm-1.93-2.9h1.94v1.94h-1.94zm8.71 4.84h1.94v1.93h-1.94zm3.87-1.94h1.94v1.94h-1.94zm22.26 22.26a5.81 5.81 0 1 1 11.63.01 5.81 5.81 0 0 1-11.63 0zm1.94 0c0 .36.06.7.15 1.03l1.56-.9.97 1.68-1.57.9c.48.5 1.1.85 1.8 1.03v-1.8h1.93v1.8c.68-.18 1.3-.54 1.79-1.03l-1.57-.9.97-1.68 1.55.9c.1-.33.16-.67.16-1.03s-.06-.7-.15-1.03l-1.56.9-.97-1.67 1.57-.9c-.49-.5-1.1-.85-1.8-1.03v1.8h-1.93v-1.8c-.69.18-1.3.53-1.79 1.02l1.57.9-.97 1.68-1.56-.9c-.09.33-.15.67-.15 1.03zm16.45 7.74v1.94h-60v-1.94h1.94v-17.42h1.93v-1.93h-1.93v-1.94h1.93v-3.87h8.71c2.34 0 4.3 1.67 4.74 3.87h2.03v1.94h-1.93v1.93h1.93v17.42h17.42v-17.42h1.94v-5.8h2.9v-11.05a6.73 6.73 0 0 1-.93-4.15l-5.44-6.12a6.6 6.6 0 0 1-.9-.14l-8.5 7.86a5.09 5.09 0 0 1-6.43.4l-5.18 5.17-1.37-1.37 5.22-5.2a5.06 5.06 0 0 1 .78-6.44l11.27-10.7a6.77 6.77 0 0 1 12.16 1.73l8.75 9.78a6.77 6.77 0 0 1 2.19 9.18v11.05h2.9v5.8h1.93v17.42zm-54.2-21.29h9.5a2.9 2.9 0 0 0-2.72-1.93h-6.77zm0 3.87h9.68v-1.93h-9.67zm11.62 1.94h-13.55v5.8h9.68v1.94h-9.68v7.74h13.55v-7.74h-1.94v-1.93h1.94zm30-27.1a4.84 4.84 0 1 0 .01 9.7 4.84 4.84 0 0 0-.01-9.7zm0 11.62a6.73 6.73 0 0 1-3.87-1.23v8.97h7.74v-8.97a6.73 6.73 0 0 1-3.87 1.23zm-15.07-14.51a6.77 6.77 0 0 1-3.32-5.79l-8.84 8.4a3.14 3.14 0 0 0-.06 4.53 3.16 3.16 0 0 0 4.39.09zm3.46-.98a4.85 4.85 0 1 0-.01 0zm11.6 1.94h.09l-5.03-5.62a6.79 6.79 0 0 1-4.84 5.36l3.67 4.14a6.78 6.78 0 0 1 6.12-3.88zm-6.76 27.1h13.54v-3.88h-13.54zm15.48 1.93H243.7v15.48h17.42z"/><clipPath id="6pnnc"><use class="_white" fill="#fff" xlink:href="#6pnna"/></clipPath></defs><g><g transform="translate(-177 -1554)"><use class="_light-grey" fill="#f7f7f7" xlink:href="#6pnnb"/><use class="_white" fill="#fff" fill-opacity="0" stroke="#cedde2" stroke-dasharray="120 16 2 16 16 40" stroke-linecap="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#6pnnc&quot;)" xlink:href="#6pnnb"/></g><g transform="translate(-177 -1554)"><use class="_black" fill="#1f2135" xlink:href="#6pnnd"/></g></g></svg>
+          <span>ПРОИЗВОДСТВЕННОЕ <br> ОБОРУДОВАНИЕ</span>
+          <svg class="sections__svg-line sections__svg-line--left-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="303" height="193" viewBox="0 0 303 193"><defs><path id="xu3da" d="M866.1 1426.44L667 1615.28H567"/><clipPath id="xu3db"><use fill="#fff" xlink:href="#xu3da"/></clipPath></defs><g><g transform="translate(-565 -1424)"><use class="_anim" fill="#fff" fill-opacity="0" stroke="#c2d1d5" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#xu3db&quot;)" xlink:href="#xu3da"/></g></g></svg>
+        </a>
+      </div>
+
+      <div class="sections__wrapper sections__wrapper--go-right">
+        <a class="sections__item">
+          <svg class="sections__svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="115" height="115" viewBox="0 0 115 115"><defs><path id="eozja" d="M1345 1671v-119h119v119zm6-59a54 54 0 1 0 108 0 54 54 0 0 0-108 0z"/><path id="eozjb" d="M1405 1558a54 54 0 1 1 0 108 54 54 0 0 1 0-108z"/><path id="eozjd" d="M1397.51 1589.78h1.9v9.5h-1.9zm13.31 0h1.9v9.5h-1.9zm-15.7.83l-.91-1.67 10.9-5.94 10.92 5.94-.9 1.67-10.01-5.45zm4.3 34.3a4.76 4.76 0 1 1-9.52-.02 4.76 4.76 0 0 1 9.51.02zm-1.9 0a2.85 2.85 0 1 0-5.71.01 2.85 2.85 0 0 0 5.7-.01zm13.3 0a4.76 4.76 0 1 1 9.51.02 4.76 4.76 0 0 1-9.5-.02zm1.9 0a2.85 2.85 0 1 0 5.71-.01 2.85 2.85 0 0 0-5.7 0zm-7.6 3.4l6.65 6.65v7.04h-1.9v-6.25l-4.75-4.75-4.75 4.75v6.25h-1.9v-7.04zm23.77-1.39c0 .78-.32 1.55-.87 2.1l-6.74 6.73v6.25h-1.9v-7.04l7.3-7.28c.2-.2.3-.48.3-.76a1.07 1.07 0 0 0-1.82-.75l-6.66 6.65-.65-.5c-1.35-1-3.2-1-4.54 0l-.66.5-6.66-6.65c-.2-.2-.48-.31-.76-.31h-.23c-.28 0-.55.11-.75.31l-6.66 6.65-.66-.5c-1.35-1-3.2-1-4.54 0l-.66.5-6.66-6.65a1.07 1.07 0 0 0-1.5 1.5l7.29 7.29v7.04h-1.9v-6.25l-6.74-6.73a2.97 2.97 0 0 1 4.2-4.2l5.53 5.53a5.68 5.68 0 0 1 5.42 0l5.54-5.52a2.99 2.99 0 0 1 2.1-.87h.22a3 3 0 0 1 2.1.87l5.54 5.52a5.68 5.68 0 0 1 5.42 0l5.53-5.52a2.97 2.97 0 0 1 5.07 2.1zm-38.98-21.95a4.76 4.76 0 1 1 9.5.02 4.76 4.76 0 0 1-9.5-.02zm1.9 0a2.85 2.85 0 1 0 5.7-.01 2.85 2.85 0 0 0-5.7.01zm19.01 0a4.76 4.76 0 1 1 9.52.02 4.76 4.76 0 0 1-9.52-.02zm1.9 0a2.85 2.85 0 1 0 5.71-.01 2.85 2.85 0 0 0-5.7.01zm-7.6 3.4l6.65 6.65v7.04h-1.9v-6.25l-4.75-4.75-4.75 4.75v6.25h-1.9v-7.04zm23.77-1.39c0 .78-.32 1.55-.87 2.1l-6.74 6.73v6.25h-1.9v-7.04l7.3-7.28c.2-.2.3-.48.3-.76a1.07 1.07 0 0 0-1.82-.75l-6.66 6.65-.65-.5c-1.35-1-3.2-1-4.54 0l-.66.5-6.66-6.65c-.2-.2-.48-.31-.76-.31h-.23c-.28 0-.55.11-.75.31l-6.66 6.65-.66-.5c-1.35-1-3.2-1-4.54 0l-.66.5-6.66-6.65a1.07 1.07 0 0 0-1.5 1.5l7.29 7.3v7.03h-1.9v-6.25l-6.74-6.73a2.97 2.97 0 0 1 4.2-4.2l5.53 5.53a5.68 5.68 0 0 1 5.42 0l5.54-5.52a2.99 2.99 0 0 1 2.1-.87h.22a3 3 0 0 1 2.1.87l5.54 5.52a5.68 5.68 0 0 1 5.42 0l5.53-5.52a2.97 2.97 0 0 1 5.07 2.1zm-50.4-7.7h1.91v18.98h-1.9zm9.52 0h1.9v2.84h-1.9zm-3.8-4.56l-8.04 5.34-1.05-1.58 9.08-6.05 9.09 6.05-1.06 1.58zm45.63-.2h1.9v18.05h-1.9zm-9.51 0h1.9v7.6h-1.9zm14.79-.78l-1.06 1.58-8.03-5.35-8.02 5.35-1.06-1.58 9.08-6.05zm-56.62 26.42h1.9v1.9h-1.9zm51.34-5.7h1.9v1.9h-1.9zm0 3.8h1.9v1.9h-1.9zm-25.67-30.38h1.9v7.6h-1.9zm0 9.5h1.9v1.9h-1.9zm0 3.8h1.9v1.9h-1.9z"/><clipPath id="eozjc"><use class="_white" fill="#fff" xlink:href="#eozja"/></clipPath></defs><g><g transform="translate(-1347 -1554)"><use class="_light-grey" fill="#f7f7f7" xlink:href="#eozjb"/><use class="white" fill="#fff" fill-opacity="0" stroke="#cedde2" stroke-dasharray="120 16 2 16 16 40" stroke-linecap="round" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#eozjc&quot;)" xlink:href="#eozjb"/></g><g transform="translate(-1347 -1554)"><use class="_black" fill="#1f2135" xlink:href="#eozjd"/></g></g></svg>
+          <span>АУТСОРСИНГ</span>
+          <svg class="sections__svg-line sections__svg-line--right-bottom" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="303" height="193" viewBox="0 0 303 193"><defs><path id="zgjea" d="M1050.19 1426.72l199.1 188.56H1350"/><clipPath id="zgjeb"><use fill="#fff" xlink:href="#zgjea"/></clipPath></defs><g><g transform="translate(-1048 -1425)"><use class="_anim" fill="#fff" fill-opacity="0" stroke="#c2d1d5" stroke-miterlimit="50" stroke-width="2" clip-path="url(&quot;#zgjeb&quot;)" xlink:href="#zgjea"/></g></g></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="sections__sign">SERVIСES</div>
+  </div>
+
+
+  <!-- ADVANTAGES -->
+  <div class="advantages">
+    <!-- SCROLL MENU -->
+    <nav class="advantages__scroll-menu scroll-menu">
+      <div class="scroll-menu__title">ПРЕИМУЩЕСТВА</div>
+      <a href="#.about-company" class="scroll-menu__item"></a>
+      <a href="#.sections" class="scroll-menu__item"></a>
+      <a href="#.advantages" class="scroll-menu__item is-active"></a>
+      <a href="#.partners" class="scroll-menu__item"></a>
+      <a href="#.outsourcing" class="scroll-menu__item"></a>
+      <a href="#.news" class="scroll-menu__item"></a>
+    </nav>
+
+    <div class="advantages__holder">
+      <img class="advantages__photo" src="styles/images/advantages__photo.png">
+      <div class="advantages__wrapper">
+        <div class="advantages__person">
+          <img class="advantages__photo-small" src="styles/images/advantages__photo.png"></img>
+          <div>
+            <div class="advantages__name">ЧУМАЧЕНКО РОМАН</div>
+            <div class="advantages__position">Главный инженер</div>
+          </div>
+        </div>
+        <div class="advantages__text">
+          У нас каждый сотрудник – Мастер Своего Дела. И несмотря на это, мы уверены, что нам всем есть чему учиться. Поэтому процесс совершенствования – неотъемлемая часть нашего бизнеса. <br> 
+          Компания вкладывает большие средства в обучение всех своих сотрудников, в том числе в постоянные стажировки у ведущих европейских компаний.
+        </div>
+
+        <div class="advantages__successes">
+          <div class="advantages__numbers">
+            <span>
+              10
+            </span>
+            <p>
+            Лет      <br>
+            успешной<br>
+            работы
+            </p>
+          </div>
+
+          <div class="advantages__numbers">
+            <span>
+              40
+            </span>
+            <p>
+              Довольных <br>
+              и крупных <br>
+              клиентовы
+            </p>
+          </div>
+
+
+          <div class="advantages__numbers">
+            <span>
+              120
+            </span>
+            <p>
+              Международных <br>
+              и надёжных    <br> 
+              партнёров
+            </p>
+          </div>
+
+        </div>
+
+        <div class="advantages__swiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="advantages__numbers advantages__numbers--slide">
+                    <span>
+                      10
+                    </span>
+                    <p>
+                    Лет      <br>
+                    успешной<br>
+                    работы
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide advantages__numbers--slide">
+                  <div class="advantages__numbers">
+                    <span>
+                      40
+                    </span>
+                    <p>
+                      Довольных <br>
+                      и крупных <br>
+                      клиентов
+                    </p>
+                  </div>
+                </div>
+
+                <div class="swiper-slide advantages__numbers--slide">
+                  <div class="advantages__numbers">
+                    <span>
+                      120
+                    </span>
+                    <p>
+                      Международных <br>
+                      и надёжных    <br> 
+                      партнёров
+                    </p>
+                  </div>
+                </div>
+            </div>
+          
+          <div class="advantages__slider-buttons slider-buttons">
+            <svg class="slider-buttons__next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="8faca" d="M1624.68 2390l-5.68 5.72 18.65 18.78-18.65 18.78 5.68 5.72 24.32-24.5z"/></defs><g><g transform="translate(-1618 -2388)"><use class="_animate" fill="#1f2135" xlink:href="#8faca"/></g></g></svg>
+            <div class="slider-buttons__separator"></div>
+            <svg class="slider-buttons__previous" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="v2yqa" d="M1643.32 2539l5.68-5.72-18.65-18.78 18.65-18.78-5.68-5.72-24.32 24.5z"/></defs><g><g transform="translate(-1618 -2488)"><use class="_animate" fill="#1f2135" xlink:href="#v2yqa"/></g></g></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- PARTNERS -->
+  <div class="partners">
+    <div class="partners__title">ПАРТНЁРЫ</div>
+    <a class="partners__more link" href="#"><span>ПОДРОБНЕЕ О ВСЕХ ПАРТНЁРАХ</span></a>
+    <img class="partners__image" src="styles/images/partners__image.jpg">
+
+    <nav class="partners__scroll-menu scroll-menu">
+      <div class="scroll-menu__title">ПАРТНЁРЫ</div>
+      <a href="#.about-company" class="scroll-menu__item"></a>
+      <a href="#.sections" class="scroll-menu__item"></a>
+      <a href="#.advantages" class="scroll-menu__item"></a>
+      <a href="#.partners" class="scroll-menu__item is-active"></a>
+      <a href="#.outsourcing" class="scroll-menu__item"></a>
+      <a href="#.news" class="scroll-menu__item"></a>
+    </nav>
+
+    <div class="partners__holder">
+
+      <div class="partners__container">
+        <div class="partners__spinner-big"></div>
+        <div class="partners__spinner-small"></div>
+        <div class="partners__big-circle"></div>
+        <div class="partners__small-circle"></div>
+        <div class="partners__slider-buttons slider-buttons slider-buttons--mobile-horizontal">
+          <svg class="slider-buttons__next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="8faca" d="M1624.68 2390l-5.68 5.72 18.65 18.78-18.65 18.78 5.68 5.72 24.32-24.5z"/></defs><g><g transform="translate(-1618 -2388)"><use class="_animate" fill="#1f2135" xlink:href="#8faca"/></g></g></svg>
+          <div class="slider-buttons__separator"></div>
+          <svg class="slider-buttons__previous" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="v2yqa" d="M1643.32 2539l5.68-5.72-18.65-18.78 18.65-18.78-5.68-5.72-24.32 24.5z"/></defs><g><g transform="translate(-1618 -2488)"><use class="_animate" fill="#1f2135" xlink:href="#v2yqa"/></g></g></svg>
+        </div>
+      </div>
+
+
+
+      <div class="partners__swiper swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/bossar-logo.png">
+                <a class="card-of-partner__more link" href="#"><span>ПОДРОБНЕЕ</span></a>
+                <a class="card-of-partner__link link" href="http://www.bossar.com"><span>WWW.BOSSAR.COM</span></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/stephan-logo.png">
+                <a class="card-of-partner__link link" href="http://www.stephan-machinery.com"><span>WWW.STEPHAN-MACHINERY.COM</span></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/mespack-logo.png">
+                <a class="card-of-partner__link link" href="http://www.mespack.com"><span>WWW.MESPACK.COM</span></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/atlas-logo.png">
+                <a class="card-of-partner__link link" href="http://www.atlasschuhe.de"><span>WWW.ATLASSCHUHE.DE</span></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/fristam-logo.png">
+                <a class="card-of-partner__link link" href="http://www.fristam.de"><span>WWW.FRISTAM.DE</span></a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners__sign">PARTNERS</div>
+  </div>
+
+  <!-- OUTSOURCING -->
+  <div class="outsourcing">
+    <nav class="partners__scroll-menu scroll-menu">
+      <div class="scroll-menu__title">АУТСОРСИНГ</div>
+      <a href="#.about-company" class="scroll-menu__item"></a>
+      <a href="#.sections" class="scroll-menu__item"></a>
+      <a href="#.advantages" class="scroll-menu__item"></a>
+      <a href="#.partners" class="scroll-menu__item"></a>
+      <a href="#.outsourcing" class="scroll-menu__item is-active"></a>
+      <a href="#.news" class="scroll-menu__item"></a>
+    </nav>
+
+    <div class="outsourcing__holder">
+      <img src="styles/images/outsourcing__image.png" alt="" class="outsourcing__image">
+      <div class="outsourcing__content">
+        <div class="outsourcing__title">АУТСОРСИНГ</div>
+        <div class="outsourcing__text">
+          Аутсорсинг закупок — услуга по организации ипроведению <br>
+          закупок, осуществляемых по заявкам Клиентов. <br>
+          <br>
+          Мы ожидаем, что со временем аутсорсинг закупок будет также <br>
+          распространен, как сейчас аутсорсинг бухгалтерских и транспортных услуг.
+        </div>
+        <a class="outsourcing__more link"><span>ПОДРОБНЕЕ ОБ АУТСОРСИНГЕ</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <div class="news">
+    <div class="news__holder">
+      <div class="news__header">
+        <div class="news__title">НОВОСТИ</div>
+        <a class="link"><span>АРХИВ НОВОСТЕЙ</span></a>
+      </div>
+
+      <div class="news__wrapper">
+        <div class="news__swiper swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide news-card">
+              <img class="news-card__image" src="styles/images/news-card-1.png">
+              <div class="news-card__date">12.10.2017</div>
+              <div class="news-card__about">
+                HLR провел закрытый мастер-класс для <br>
+                LABComplEX-лабораторная медицина
+              </div>
+              <a href="#" class="link news-card__more"><span>ПОДРОБНЕЕ</span></a>
+            </div>
+
+            <div class="swiper-slide news-card">
+              <img class="news-card__image" src="styles/images/news-card-2.png">
+              <div class="news-card__date">12.10.2017</div>
+              <div class="news-card__about">
+                Позаботьтесь об энергоэффективности <br>
+                Вашего предприятия
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <div class="news__slider-buttons slider-buttons slider-buttons--mobile-horizontal">
+        <svg class="slider-buttons__next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="8faca" d="M1624.68 2390l-5.68 5.72 18.65 18.78-18.65 18.78 5.68 5.72 24.32-24.5z"/></defs><g><g transform="translate(-1618 -2388)"><use class="_animate" fill="#1f2135" xlink:href="#8faca"/></g></g></svg>
+        <div class="slider-buttons__separator"></div>
+        <svg class="slider-buttons__previous" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="v2yqa" d="M1643.32 2539l5.68-5.72-18.65-18.78 18.65-18.78-5.68-5.72-24.32 24.5z"/></defs><g><g transform="translate(-1618 -2488)"><use class="_animate" fill="#1f2135" xlink:href="#v2yqa"/></g></g></svg>
+      </div>
+    </div>
+
+  </div>
+    
+    <nav class="news__scroll-menu scroll-menu">
+      <div class="scroll-menu__title">НОВОСТИ</div>
+      <a href="#.about-company" class="scroll-menu__item"></a>
+      <a href="#.sections" class="scroll-menu__item"></a>
+      <a href="#.advantages" class="scroll-menu__item"></a>
+      <a href="#.partners" class="scroll-menu__item"></a>
+      <a href="#.outsourcing" class="scroll-menu__item"></a>
+      <a href="#.news" class="scroll-menu__item is-active"></a>
+    </nav>
+
+    <div class="news__sign">NEWS</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <a class="footer__to-top" href="##header">ВВЕРХ</a>
+    <div class="footer__holder">
+      <div class="footer__logo">
+        <a href="https://wezom.com.ua/"><img src="styles/images/footer__logo.png"></a>
+        <div>
+          <strong>ROPACK</strong> <br>
+          <span>production equipment</span>
+        </div>
+      </div>
+      <div class="footer__contact-info">
+        — &nbsp&nbsp&nbsp г. Одесса,  ул. Люстдорфская дорога 140-А <br>
+        — &nbsp&nbsp&nbsp 2018 © «ROPACK» production equipment
+      </div>
+      <div class="footer__wezom">
+        <span>РАЗРАБОТКА И ДИЗАЙН САЙТА</span>
+        <img src="styles/images/footer__wezom.svg" alt="">
+        <image class="_bar" src="styles/images/footer__wezom-bar.svg">
+      </div>
+
+    </div>
+  </footer>
+  <!-- END OF WRAPPER -->
+  </div>
+  <!-- SCRIPTS -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/arbitrary-anchor.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

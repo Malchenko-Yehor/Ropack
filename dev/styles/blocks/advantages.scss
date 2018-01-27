@@ -1,0 +1,262 @@
+.advantages {
+  position: relative;
+
+  &__scroll-menu {
+    position: absolute;
+    top: 199px;
+  }
+
+  &__holder {
+    position: relative;
+    width: 87.39vw;
+    height: calc(87.39vw * .5661);
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-image: url(../images/advantages-background.png);
+    background-size: 100% 100%;
+  }
+  
+  &__wrapper {
+    margin-left: 558px;
+    max-width: 770px;
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo {
+    position: absolute;
+    top: 93px;
+    left: 95px;
+  }
+
+  &__photo-small {
+    display: none; 
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+  }
+
+  &__name {
+    padding-top: 132px;
+    color: #1f2135;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: rem(96);
+    font-weight: 400;
+    line-height: rem(90);
+    text-transform: uppercase;
+    letter-spacing: 9.6px;
+  }
+
+  &__position {
+    margin-top: 40px;
+    color: #1f2135;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: rem(36);
+    font-weight: 400;
+    line-height: rem(36);
+  }
+
+  &__text {
+    margin-top: 33px;
+    max-width: 674px;
+    color: #2f3035;
+    font-family: Roboto, sans-serif;
+    font-size: rem(18);
+    font-weight: 300;
+    line-height: rem(24);
+  }
+
+  &__successes {
+    margin-top: rem(78);
+    padding-bottom: 20px;
+    max-width: 770px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__numbers {
+    position: relative;
+
+    &--slide {
+      background-color: #fff;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 167px;
+      width: 67px;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-image: url(../images/advantages-separator.png);
+    }
+
+    p {
+      margin: 0;
+      color: #1f2135;
+      font-family: "Ristretto-pro Regular", sans-serif;
+      font-size: rem(36);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+
+
+    span {
+      display: inline-block;
+      position: relative;
+      color: #e90e37;
+      font-family: "Ristretto-pro Regular", sans-serif;
+      font-size: rem(200);
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 83px;
+
+      &::after {
+        position: absolute;
+        left: 100%;
+        top: -18px;
+        content: '+';
+        font-family: "Ristretto-pro Thin", sans-serif;
+        font-weight: 100;
+        font-size: rem(150);
+        letter-spacing: 0;
+      }
+    }
+  }
+
+
+  &__swiper {
+    position: relative;
+    display: none;
+    margin-top: rem(78);
+  }
+
+  &__slider-buttons {
+    z-index: 10;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+}
+
+
+@media only screen and (max-width: 1800px){
+  .advantages {
+    &__holder {
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 1630px){
+  .advantages {
+    &__wrapper {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__photo {
+      display: none;
+    }
+
+    &__photo-small {
+      display: block;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1600px){
+  .advantages {
+    &__holder {
+      background: none;
+    }
+
+    &__name {
+      padding-top: 0;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1000px){
+  .advantages {
+    &__holder {
+      width: auto;
+      margin-left: rem(80);
+      margin-right: 15px;
+    }
+
+    &__successes {
+      padding-right: 35px;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px){
+  .advantages {
+    &__name {
+      font-size: rem(60);
+      line-height: 1;
+    }
+  }
+}
+
+@media only screen and (max-width: 610px){
+  .advantages {
+    &__successes {
+      display: none;
+    }
+
+    &__swiper {
+      display: block;
+    }
+
+    &__person {
+      flex-direction: column;
+    }
+
+    &__photo-small {
+      width: 240px;
+      height: 240px;
+    }
+
+    &__position {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    &__name {
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    &__swiper {
+      margin-top: 20px;
+    }
+
+    &__numbers {
+      span {
+        margin-bottom: 0
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .advantages {
+    &__slider-buttons {
+      right: 15px;
+    }
+  }
+}

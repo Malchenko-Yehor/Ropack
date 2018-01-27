@@ -1,0 +1,127 @@
+.header {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: rem(25);
+
+  &__logo {
+      
+    display: flex;
+    align-items: start;
+    margin-left: rem(122); 
+    margin-top: rem(20);
+
+    img {
+      margin-right: 12px;
+    }
+
+    strong {
+      z-index: 0;
+      color: #1f2135;
+      font-family: "Cervo";
+      font-weight: 500;
+      line-height: 0.85;  
+      font-size: rem(65)
+    }
+
+    p {
+      z-index: 0;
+      display: block;
+      margin: 0;
+      opacity: 0.8;
+      color: #1f2135;
+      font-family: Roboto;
+      font-size: rem(15.5);
+      font-style: italic;
+    }
+  }
+
+  &__call {
+    margin-top: 33px;
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin-right: 9%;
+  }
+
+  &__phone-number {
+    color: #fff;
+    font-family: Roboto;
+    font-size: rem(24);
+    font-weight: 300;
+  }
+
+  &__callback {
+    border: 0;
+    border-radius: 30px;
+    width: 250px;
+    max-width: 250px;
+    height: 50px;
+    background-color: #0255ff;
+    color: #ffffff;
+    font-family: "Ristretto-slab-pro Regular", Serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: rem(37);
+    letter-spacing: 2px; 
+    cursor: pointer; 
+
+    &:hover, &:focus {
+      opacity: .8;
+    }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .header {
+
+    &__call {
+      justify-content: flex-start;
+      margin-right: 1%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 850px) {
+  .header {
+    flex-wrap: wrap;
+
+    &__call {
+      margin-left: rem(80); 
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .header {
+    &__logo {
+      display: none;
+    }
+
+    &__phone-number {
+      margin-left: rem(10);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    padding-top: 5px;
+
+    &__call {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__callback {
+      width: 220px;
+      height: 44px;
+      margin-top: 5px;
+      margin-left: rem(10);
+    }
+  }
+}
