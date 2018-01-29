@@ -1,0 +1,46 @@
+.content {
+  margin-top: 63px;
+  max-width: 1458px;
+  margin-left: 120px;
+  background-image: url("../images/parallax-about-us.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -webkit-background-size: 719px 776px;
+          background-size: 719px 776px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+  .content__title {
+    margin-top: 207px;
+    color: #1f2135;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 9.6px; }
+  .content__main {
+    text-decoration: none;
+    color: #8b8c96;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1.8px; }
+  .content__text {
+    margin-top: 38px;
+    color: #2f3035;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px; }
+  .content__header {
+    margin-top: 80px;
+    color: #1f2135;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 36px; }
+  .content__holder {
+    max-width: 660px;
+    margin-left: auto; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnRlbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsaUJBQWlCO0VBQ2pCLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkIseURBQXlEO0VBQ3pELHlCQUF5QjtFQUN6Qiw2QkFBNkI7RUFDN0IscUNBQTZCO1VBQTdCLDZCQUE2QjtFQUM3Qix3Q0FBZ0M7VUFBaEMsZ0NBQWdDLEVBQUU7RUFDbEM7SUFDRSxrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLGlEQUFpRDtJQUNqRCxnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixzQkFBc0IsRUFBRTtFQUMxQjtJQUNFLHNCQUFzQjtJQUN0QixlQUFlO0lBQ2YsaURBQWlEO0lBQ2pELGdCQUFnQjtJQUNoQixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLHNCQUFzQixFQUFFO0VBQzFCO0lBQ0UsaUJBQWlCO0lBQ2pCLGVBQWU7SUFDZixnQ0FBZ0M7SUFDaEMsZ0JBQWdCO0lBQ2hCLGlCQUFpQjtJQUNqQixrQkFBa0IsRUFBRTtFQUN0QjtJQUNFLGlCQUFpQjtJQUNqQixlQUFlO0lBQ2YsaURBQWlEO0lBQ2pELGdCQUFnQjtJQUNoQixpQkFBaUI7SUFDakIsa0JBQWtCLEVBQUU7RUFDdEI7SUFDRSxpQkFBaUI7SUFDakIsa0JBQWtCLEVBQUUiLCJmaWxlIjoiYmxvY2tzL2NvbnRlbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRlbnQge1xuICBtYXJnaW4tdG9wOiA2M3B4O1xuICBtYXgtd2lkdGg6IDE0NThweDtcbiAgbWFyZ2luLWxlZnQ6IDEyMHB4O1xuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuLi9pbWFnZXMvcGFyYWxsYXgtYWJvdXQtdXMucG5nXCIpO1xuICBiYWNrZ3JvdW5kLXBvc2l0aW9uOiAwIDA7XG4gIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XG4gIGJhY2tncm91bmQtc2l6ZTogNzE5cHggNzc2cHg7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlM2QoMCwgMCwgMCk7IH1cbiAgLmNvbnRlbnRfX3RpdGxlIHtcbiAgICBtYXJnaW4tdG9wOiAyMDdweDtcbiAgICBjb2xvcjogIzFmMjEzNTtcbiAgICBmb250LWZhbWlseTogXCJSaXN0cmV0dG8tcHJvIFJlZ3VsYXJcIiwgc2Fucy1zZXJpZjtcbiAgICBmb250LXNpemU6IDk2cHg7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBsaW5lLWhlaWdodDogMTtcbiAgICBsZXR0ZXItc3BhY2luZzogOS42cHg7IH1cbiAgLmNvbnRlbnRfX21haW4ge1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICBjb2xvcjogIzhiOGM5NjtcbiAgICBmb250LWZhbWlseTogXCJSaXN0cmV0dG8tcHJvIFJlZ3VsYXJcIiwgc2Fucy1zZXJpZjtcbiAgICBmb250LXNpemU6IDE4cHg7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBsaW5lLWhlaWdodDogMTtcbiAgICBsZXR0ZXItc3BhY2luZzogMS44cHg7IH1cbiAgLmNvbnRlbnRfX3RleHQge1xuICAgIG1hcmdpbi10b3A6IDM4cHg7XG4gICAgY29sb3I6ICMyZjMwMzU7XG4gICAgZm9udC1mYW1pbHk6IFJvYm90bywgc2Fucy1zZXJpZjtcbiAgICBmb250LXNpemU6IDE4cHg7XG4gICAgZm9udC13ZWlnaHQ6IDMwMDtcbiAgICBsaW5lLWhlaWdodDogMjRweDsgfVxuICAuY29udGVudF9faGVhZGVyIHtcbiAgICBtYXJnaW4tdG9wOiA4MHB4O1xuICAgIGNvbG9yOiAjMWYyMTM1O1xuICAgIGZvbnQtZmFtaWx5OiBcIlJpc3RyZXR0by1wcm8gUmVndWxhclwiLCBzYW5zLXNlcmlmO1xuICAgIGZvbnQtc2l6ZTogNDhweDtcbiAgICBmb250LXdlaWdodDogNDAwO1xuICAgIGxpbmUtaGVpZ2h0OiAzNnB4OyB9XG4gIC5jb250ZW50X19ob2xkZXIge1xuICAgIG1heC13aWR0aDogNjYwcHg7XG4gICAgbWFyZ2luLWxlZnQ6IGF1dG87IH1cbiJdfQ== */

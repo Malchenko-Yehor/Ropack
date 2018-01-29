@@ -1,56 +1,28 @@
 $(document).ready(function () {
 
-  $(window).scroll(function(){
-    changeLogo();
-    scrollMenu();
+  // Parallax
+  $(function() {
+    var $el = $('.content');
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        $el.css({
+            'background-position':'0 '+(+.25*scroll)+'px'
+        });
+    });
   });
-
-    // CALLBACK INPUTS
-  $('.callback__input input').focus(function () {
-    $(this).prev().css("top", "-10px");
-  });
-
-  $('.callback__input input').blur(function () {
-    if ($(this).val() == "") {
-      $(this).prev().css("top", "50%");
-    }
-  });
-
-  // Callback validation
-  $('.callback__form').submit(function prevent(e) {
-    $('.callback__error').text('');
-    $('.callback__input input').css('borderBottom', '2px solid #cedde2');
-
-    if (validator.isEmpty($('.callback__name').val())) {
-      $('.callback__error--name').text('Введите имя');
-      $('.callback__name').css('borderBottom', '2px solid #ff4d4d');
-      e.preventDefault();
-    }
-
-    if (validator.isEmpty($('.callback__phone').val())) {
-      $('.callback__error--phone').text('Введите номер');
-      $('.callback__phone').css('borderBottom', '2px solid #ff4d4d');
-      e.preventDefault();
-    } else if (!validator.isMobilePhone($('.callback__phone').val(), 'any')) {
-       $('.callback__error--phone').text('Неверный формат номера');
-      $('.callback__phone').css('borderBottom', '2px solid #ff4d4d');
-       e.preventDefault();
-    }
-  });
-
 
   // Animated bar
   $('.animated-bar').on('inview', function(event, isInView) {
-    if (isInView) {
-      $(this).playKeyframe({
-        name: 'animated-bar', // name of the keyframe you want to bind to the selected element
-        duration: '1s', // [optional, default: 0, in ms] how long you want it to last in milliseconds
-        timingFunction: 'linear', // [optional, default: ease] specifies the speed curve of the animation
-        // iterationCount: 'infinite', //[optional, default:1]  how many times you want the animation to repeat
-        fillMode: 'forwards', //[optional, default: 'forward']  how to apply the styles outside the animation time, default value is forwards
-      });
-    }
+  if (isInView) {
+    $(this).playKeyframe({
+    name: 'animated-bar', // name of the keyframe you want to bind to the selected element
+    duration: '1s', // [optional, default: 0, in ms] how long you want it to last in milliseconds
+    timingFunction: 'linear', // [optional, default: ease] specifies the speed curve of the animation
+    // iterationCount: 'infinite', //[optional, default:1]  how many times you want the animation to repeat
+    fillMode: 'forwards', //[optional, default: 'forward']  how to apply the styles outside the animation time, default value is forwards
   });
+  }
+});
 
   $.keyframe.define([{
     name: 'animated-bar',
@@ -106,6 +78,18 @@ $(document).ready(function () {
     callback.close();
   });
 
+
+  // CALLBACK INPUTS
+  $('.callback__input input').focus(function () {
+    $(this).siblings().css("top", "-10px");
+  });
+
+  $('.callback__input input').blur(function () {
+    if ($(this).val() == "") {
+      $(this).siblings().css("top", "50%");
+    }
+  });
+
   // SWIPERS INIT
   var advantagesSwiper = new Swiper ('.advantages__swiper', {
     // Optional parameters
@@ -131,26 +115,26 @@ $(document).ready(function () {
   if ($(window).width() <= 1500) {
     var newsSwiper = new Swiper ('.news__swiper', {
       // Optional parameters
-      loop: true,
       navigation: {
         nextEl: '.news__slider-buttons .slider-buttons__next',
         prevEl: '.news__slider-buttons .slider-buttons__previous',
       },
       speed: 500,
       slidesPerView: 1,
-      spaceBetween: 49
+      spaceBetween: 0,
+      loop: true
     });
   } else {
     var newsSwiper = new Swiper ('.news__swiper', {
       // Optional parameters
-      loop: true,
       navigation: {
         nextEl: '.news__slider-buttons .slider-buttons__next',
         prevEl: '.news__slider-buttons .slider-buttons__previous',
       },
       speed: 500,
       slidesPerView: 2,
-      spaceBetween: 49
+      spaceBetween: 49,
+      loop: true
     });
   }
 
@@ -158,11 +142,11 @@ $(document).ready(function () {
   $(window).resize(function () {
     if ($(window).width() <= 1500) {
       newsSwiper.params.slidesPerView = 1;
+      newsSwiper.params.spaceBetween = 49;
     } else {
       newsSwiper.params.slidesPerView = 2;
     }
   });
-
 });
 
 function MENU(menu, burger, mainList, subList) {
@@ -247,42 +231,4 @@ function CALLBACK(callback, openButton, closeButton) {
 
   // Event listeners
   openButton.click(this.open.bind(this));
-}
-
-function changeLogo () {
-  var scroll = $(window).scrollTop();
-  if (scroll != 0) {
-    $(".navigation__logo").css({
-      "width" : "71px",
-      "height" : "64px"
-    });
-  } else {
-    $(".navigation__logo").css({
-      "width" : "84px",
-      "height" : "77px"
-    });
-  }
-};
-
-function scrollMenu () {
-  var $sections = $('.screen');
-  var currentScroll = $(this).scrollTop();
-  var $currentSection;
-
-  $('.scroll-menu__item').eq(0).addClass('is-active');
-  
-  $sections.each(function(){
-    var divPosition = $(this).offset().top;
-    
-    if( divPosition - 100 < currentScroll ){
-      $currentSection = $(this);    
-    }
-
-    var title = $currentSection.attr('data-screen-name');
-    var id = $currentSection.attr('id');
-    $('.scroll-menu__title').text(title);
-    $('.scroll-menu__item').removeClass('is-active');
-    $('.scroll-menu__item[href="##'+id + '"]').addClass('is-active');
-    
-  })
 }

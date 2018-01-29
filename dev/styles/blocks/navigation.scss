@@ -1,20 +1,14 @@
 .navigation {
-    position: fixed;
-    z-index: 200;
-    top: rem(43);
+  position: fixed;
+  z-index: 200;
+  top: rem(43);
 
-    &__logo, &__logo-small {
-      display: flex;
-      align-items: start;
-      margin-left: rem(25); 
-      margin-top: rem(2);
-    }
-
-    &__logo-small {
-      display: none;
-      width: 45px;
-      height: 40px;
-    }
+  &__logo {
+    display: flex;
+    align-items: start;
+    margin-left: rem(25); 
+    margin-top: rem(2);
+  }
 
   &__language-choose {
     position: absolute;
@@ -32,6 +26,10 @@
     a {
       color: #8b8c96;
       text-decoration: none;
+
+      &:hover {
+        color: #2f3035;        
+      }
     }
 
     .is-active {
@@ -65,11 +63,8 @@
     left: 0;
 
     &__logo {
-      display: none;
-    }
-
-    &__logo-small {
-      display: block;
+      width: 45px !important;
+      height: 40px !important;
       margin-left: 5px;
     }
 
