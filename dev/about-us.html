@@ -63,7 +63,7 @@
   </div>
 
   <!-- CALLBACK -->
-  <div class="callback">
+ <div class="callback">
     <div class="callback__container">
       <div class="callback__left-side">
 
@@ -74,15 +74,17 @@
           <div class="callback__title">
             ОБРАТНЫЙ ЗВОНОК
           </div>
-          <form name="callback" type="post">
+          <form class="callback__form" name="callback" type="post">
             <div class="callback__input">
               <label for="callback-company">Имя</label>
-              <input id="callback-company" type="text" name="company">
+              <input class="callback__name" id="callback-company" type="text" name="company">
+              <div class="callback__error callback__error--name"></div>
             </div>
             
             <div class="callback__input">
               <label for="callback-phone">Контактный телефон</label>
-              <input id="callback-phone" type="text" name="phone">
+              <input class="callback__phone" id="callback-phone" type="text" name="phone">
+              <div class="callback__error callback__error--phone"></div>
             </div>
             
             <input class="callback__submit" type="submit" name="submit" value="ПЕРЕЗВОНИТЕ МНЕ">
@@ -126,7 +128,7 @@
   </header>
   
   <!-- CONTENT -->
-  <div class="content">
+  <div class="content content--start">
     <div class="content__holder">
       <a class="content__main" href="main.html">ГЛАВНАЯ</a>
       <div class="content__title">О КОМПАНИИ</div>
@@ -152,8 +154,181 @@
       <div class="content__text">
         Мы выполняем, как в производственном цехе Beltimport, так и непосредственно на производстве клиента с помощью наших высококвалифицированных монтажных бригад, следующие услуги:
       </div>
+      <ul class="content__unordered-list-custom unordered-list-custom">
+        <li class="unordered-list-custom__item">Диагностика конвейерного, приводного и очистительного оборудования</li>
+        <li class="unordered-list-custom__item">Соединение полимерных лент с максимальной шириной 3300 мм</li>
+        <li class="unordered-list-custom__item">Нанесение профилей и гофробортов на конвейерные ленты и ремни</li>
+        <li class="unordered-list-custom__item">Монтаж лент и ремней на объектах заказчиков</li>
+        <li class="unordered-list-custom__item">Соединение металлических лент</li>
+        <li class="unordered-list-custom__item">Сборка мотор-редукторов</li>
+      </ul>
     </div>
   </div>
+  <!-- NUMBERS -->
+  <div class="numbers">
+    <div class="numbers__main numbers__main--about-page">
+      <div class="numbers__item">
+        <span>
+          10
+        </span>
+        <p>
+        Лет      <br>
+        успешной<br>
+        работы
+        </p>
+      </div>
+
+      <div class="numbers__item">
+        <span>
+          40
+        </span>
+        <p>
+          Довольных <br>
+          и крупных <br>
+          клиентовы
+        </p>
+      </div>
+
+
+      <div class="numbers__item">
+        <span>
+          120
+        </span>
+        <p>
+          Международных <br>
+          и надёжных    <br> 
+          партнёров
+        </p>
+      </div>
+    </div>
+
+    <div class="numbers__swiper swiper-container">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="numbers__item numbers__item--slide">
+              <span>
+                10
+              </span>
+              <p>
+              Лет      <br>
+              успешной<br>
+              работы
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide numbers__item--slide">
+            <div class="numbers__item">
+              <span>
+                40
+              </span>
+              <p>
+                Довольных <br>
+                и крупных <br>
+                клиентов
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-slide numbers__item--slide">
+            <div class="numbers__item">
+              <span>
+                120
+              </span>
+              <p>
+                Международных <br>
+                и надёжных    <br> 
+                партнёров
+              </p>
+            </div>
+        </div>
+      </div>
+
+    
+    <div class="numbers__slider-buttons slider-buttons">
+      <svg class="slider-buttons__next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="8faca" d="M1624.68 2390l-5.68 5.72 18.65 18.78-18.65 18.78 5.68 5.72 24.32-24.5z"/></defs><g><g transform="translate(-1618 -2388)"><use class="_animate" fill="#1f2135" xlink:href="#8faca"/></g></g></svg>
+      <div class="slider-buttons__separator"></div>
+      <svg class="slider-buttons__previous" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="v2yqa" d="M1643.32 2539l5.68-5.72-18.65-18.78 18.65-18.78-5.68-5.72-24.32 24.5z"/></defs><g><g transform="translate(-1618 -2488)"><use class="_animate" fill="#1f2135" xlink:href="#v2yqa"/></g></g></svg>
+    </div>
+  </div>  
+</div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="content__holder">
+      <div class="content__header">Наши партнёры</div>
+      <div class="content__text">
+        Мы лично знакомы с большинством мировых производителей приводных и конвейерных элементов. И предлагаем нашим клиентам только то, в чём уверены - только самое лучшее.
+      </div>
+    </div>
+  </div>
+
+  <!-- PARTNERS -->
+  <div class="partners">
+    <a class="partners__more partners__more--about-page link" href="#"><span>ПОДРОБНЕЕ О ВСЕХ ПАРТНЁРАХ</span></a>
+
+    <div class="partners__holder">
+
+      <div class="partners__container">
+        <div class="partners__spinner-big"></div>
+        <div class="partners__spinner-small"></div>
+        <div class="partners__big-circle"></div>
+        <div class="partners__small-circle"></div>
+        <div class="partners__slider-buttons slider-buttons slider-buttons--mobile-horizontal">
+          <svg class="slider-buttons__next" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="8faca" d="M1624.68 2390l-5.68 5.72 18.65 18.78-18.65 18.78 5.68 5.72 24.32-24.5z"/></defs><g><g transform="translate(-1618 -2388)"><use class="_animate" fill="#1f2135" xlink:href="#8faca"/></g></g></svg>
+          <div class="slider-buttons__separator"></div>
+          <svg class="slider-buttons__previous" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="52" viewBox="0 0 32 52"><defs><path id="v2yqa" d="M1643.32 2539l5.68-5.72-18.65-18.78 18.65-18.78-5.68-5.72-24.32 24.5z"/></defs><g><g transform="translate(-1618 -2488)"><use class="_animate" fill="#1f2135" xlink:href="#v2yqa"/></g></g></svg>
+        </div>
+      </div>
+
+
+
+      <div class="partners__swiper swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/bossar-logo.png">
+                <a class="card-of-partner__more link" href="#"><span>ПОДРОБНЕЕ</span></a>
+                <a class="card-of-partner__link link" href="http://www.bossar.com"><span>WWW.BOSSAR.COM</span></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/stephan-logo.png">
+                <a class="card-of-partner__link link" href="http://www.stephan-machinery.com"><span>WWW.STEPHAN-MACHINERY.COM</span></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/mespack-logo.png">
+                <a class="card-of-partner__link link" href="http://www.mespack.com"><span>WWW.MESPACK.COM</span></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/atlas-logo.png">
+                <a class="card-of-partner__link link" href="http://www.atlasschuhe.de"><span>WWW.ATLASSCHUHE.DE</span></a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="partners__card-of-partner card-of-partner">
+                <img class="card-of-partner__logo" src="styles/images/fristam-logo.png">
+                <a class="card-of-partner__link link" href="http://www.fristam.de"><span>WWW.FRISTAM.DE</span></a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="partners__sign partners__sign--about-page">PARTNERS</div>
+  </div>
+
+  <!-- PAGE TITLE -->
+  <div class="page-title">about us</div>
 
   <!-- FOOTER -->
   <footer class="footer">

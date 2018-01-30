@@ -1,0 +1,127 @@
+.numbers {
+
+  &__main {
+    margin-top: rem(78);
+    padding-bottom: 20px;
+    max-width: 770px;
+    display: flex;
+    justify-content: space-between;
+
+    &--about-page {
+      margin-left: 400px;
+      max-width: 964px;
+    }
+  }
+
+
+  &__item {
+    position: relative;
+
+    &--slide {
+      background-color: #fff;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 167px;
+      width: 67px;
+      height: 35px;
+      background-repeat: no-repeat;
+      background-image: url(../images/advantages-separator.png);
+    }
+
+    p {
+      margin: 0;
+      color: #1f2135;
+      font-family: "Ristretto-pro Regular", sans-serif;
+      font-size: rem(36);
+      font-weight: 400;
+      line-height: 1;
+    }
+
+
+
+    span {
+      display: inline-block;
+      position: relative;
+      color: #e90e37;
+      font-family: "Ristretto-pro Regular", sans-serif;
+      font-size: rem(200);
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 83px;
+
+      &::after {
+        position: absolute;
+        left: 100%;
+        top: -18px;
+        content: '+';
+        font-family: "Ristretto-pro Thin", sans-serif;
+        font-weight: 100;
+        font-size: rem(150);
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  &__swiper {
+    margin-left: 100px;
+    position: relative;
+    display: none;
+    margin-top: rem(78);
+  }
+
+  &__slider-buttons {
+    z-index: 10;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+}
+
+
+@media only screen and (max-width: 1550px){
+  .numbers {
+    &__main {
+      &--about-page {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1250px){
+  .numbers {
+    &__main {
+      &--about-page {
+        padding-left: 110px;
+        padding-right: 110px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px){
+  .numbers {
+    &__main {
+      display: none;
+    }
+
+    &__swiper {
+      display: block;
+    }
+
+    &__item {
+      span {
+        margin-bottom: 0
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

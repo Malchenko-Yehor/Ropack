@@ -1,25 +1,17 @@
 .content {
-  margin-top: 63px;
   max-width: 1458px;
   margin-left: 120px;
 
-  background-image: url('../images/parallax-about-us.png');
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: 719px 776px;
 
-  transform: translate3d(0,0,0);
+  &--start {
+    margin-top: -60px;
+    padding-top: 123px;
+    background-image: url('../images/parallax-about-us.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 719px 776px;
+    transform: translate3d(0,0,0);
 
-  &__parallax {
-    // background-image: url('http://placekitten.com/1000/1000');
-    // background-position: 50% 0;
-    // background-repeat: no-repeat;
-    // -webkit-background-size: cover;
-    // background-size: cover;
-
-    // -moz-transform: translate3d(0,0,0);
-    // -webkit-transform: translate3d(0,0,0);
-    // transform: translate3d(0,0,0);
   }
 
   &__title {
@@ -33,6 +25,7 @@
   }
 
   &__main {
+    display: block;
     text-decoration: none;
     color: #8b8c96;
     font-family: "Ristretto-pro Regular", sans-serif;
@@ -65,4 +58,50 @@
     margin-left: auto;
   }
 
+  &__unordered-list-custom {
+    margin-top: 39px; 
+  }
+}
+
+@media only screen and (max-width: 1550px) {
+  .content {
+    &__title {
+      margin-top: 70px;
+    }
+
+    &--start {
+      background: none;
+    }
+
+    &__holder {
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .content {
+    margin-left: rem(80);
+
+    &--start {
+      background: none;
+    }
+
+    &__holder {
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 15px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .content {
+    &__title {
+      font-size: 55px;
+    }
+  }
 }

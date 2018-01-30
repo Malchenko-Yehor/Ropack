@@ -1,0 +1,26 @@
+.unordered-list-custom {
+  padding: 0;
+  list-style-type: none;
+
+  &__item {
+    margin-top: 30px;
+    position: relative;
+    padding-left: 35px;
+    color: #1f2135;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #e90e37;
+      width: 13px;
+      height: 8px;
+    }
+  }
+}

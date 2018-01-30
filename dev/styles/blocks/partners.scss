@@ -34,9 +34,17 @@
     right: 417px;
     top: 167px;
     color: #1f2135;
+
+    &--about-page {
+      right: auto;
+      top: auto;
+      left: 50%;
+      bottom: 70px;
+    }
   }
 
   &__sign {
+    z-index: -1;
     position: absolute;
     bottom: 0;
     right: 118px;
@@ -46,6 +54,15 @@
     font-size: 200px;
     font-weight: 700;
     line-height: .67;
+
+    &--about-page {
+      font-size: 350px;
+      bottom: auto;
+      top: 120px;
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__scroll-menu {
