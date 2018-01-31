@@ -1,0 +1,117 @@
+.pagination {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 549px;
+  justify-content: space-between;
+
+  &__bar {
+    display: none;
+    width: 55px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: url(../images/pagination-bar.svg);
+    background-size: 100% 100%;
+  }
+
+  &__holder {
+    display: flex;
+    justify-content: space-between;
+    max-width: 276px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__number {
+    cursor: pointer;
+    color: #1f2135;
+    font-family: "Ristretto-pro Regular";
+    font-size: rem(36);
+    font-weight: 400;
+
+    &:hover {
+      color: #e90e37;
+    }
+  }
+
+  &__number.is-active {
+    color: #e90e37;
+  }
+
+  ._animate {
+    transition: fill .3s;
+  }
+
+  &__arrow-next {
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 49px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      left: calc(100% + 18px);
+      top: 0;
+      width: 55px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-image: url(../images/pagination-bar.svg);
+      background-size: 100% 100%;
+    }
+
+    &:hover {
+      ._animate {
+        fill: #e90e37;
+      }
+    }
+  }
+
+  &__arrow-previous {
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 49px;
+
+    &::before {
+      content: ' ';
+      position: absolute;
+      right: calc(100% + 18px);
+      top: 0;
+      width: 55px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-image: url(../images/pagination-bar.svg);
+      background-size: 100% 100%;
+    }
+
+    &:hover {
+      ._animate {
+        fill: #e90e37;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1580px) {
+  .pagination {
+    margin-bottom: 118px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .pagination {
+    max-width: 200px;
+    margin-bottom: 50px;
+
+    &__holder,
+    &__arrow-previous::before,
+    &__arrow-next::before {
+      display: none;
+    }
+
+    &__bar {
+      display: block;
+    }
+  }
+}

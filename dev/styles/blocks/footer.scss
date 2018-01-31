@@ -1,6 +1,5 @@
 .footer {
   position: relative;
-  // margin-top: 105px;
   
   
   &__holder {
@@ -47,7 +46,8 @@
     display: inline-flex;
     align-items: center;
     
-    img {
+    a {
+      display: block;
       margin-right: 12px;
     }
 

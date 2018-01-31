@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
   jQuery.scrollSpeed(200, 800);
 
   $(window).scroll(function(){
@@ -119,26 +120,39 @@ $(document).ready(function () {
     callback.close();
   });
 
-  // SWIPERS INIT
-  var numbersSwiper = new Swiper ('.numbers__swiper', {
-    // Optional parameters
-    navigation: {
-      nextEl: '.numbers__slider-buttons .slider-buttons__next',
-      prevEl: '.numbers__slider-buttons .slider-buttons__previous',
-    },
-    effect: 'fade',
-    loop: true
-  });
+  if ($(window).width() <= 1500) {
+    var newsSwiper = new Swiper ('.news__swiper', {
+      // Optional parameters
+      loop: true,
+      navigation: {
+        nextEl: '.news__slider-buttons .slider-buttons__next',
+        prevEl: '.news__slider-buttons .slider-buttons__previous',
+      },
+      speed: 500,
+      slidesPerView: 1,
+      spaceBetween: 49
+    });
+  } else {
+    var newsSwiper = new Swiper ('.news__swiper', {
+      // Optional parameters
+      loop: true,
+      navigation: {
+        nextEl: '.news__slider-buttons .slider-buttons__next',
+        prevEl: '.news__slider-buttons .slider-buttons__previous',
+      },
+      speed: 500,
+      slidesPerView: 2,
+      spaceBetween: 49
+    });
+  }
 
-  var partnersSwiper = new Swiper ('.partners__swiper', {
-    // Optional parameters
-    navigation: {
-      nextEl: '.partners__slider-buttons .slider-buttons__next',
-      prevEl: '.partners__slider-buttons .slider-buttons__previous',
-    },
-    effect: 'fade',
-    speed: 500,
-    loop: true
+
+  $(window).resize(function () {
+    if ($(window).width() <= 1500) {
+      newsSwiper.params.slidesPerView = 1;
+    } else {
+      newsSwiper.params.slidesPerView = 2;
+    }
   });
 
 });
@@ -264,6 +278,18 @@ function scrollMenu () {
     
   })
 }
+
+
+
+
+// $(document).ready(function(){
+//       // $fn.scrollSpeed(step, speed, easing);
+
+// });
+
+// Custom scrolling speed with jQuery
+// Source: github.com/ByNathan/jQuery.scrollSpeed
+// Version: 1.0.2
 
 (function($) {
     

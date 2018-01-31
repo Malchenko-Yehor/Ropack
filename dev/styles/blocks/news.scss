@@ -31,6 +31,11 @@
     align-items: flex-start;
     justify-content: space-between;
     max-width: 1539px;
+
+    &--centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__header {
@@ -40,6 +45,11 @@
     margin-right: 15px;
     align-items: flex-end;
     align-content: flex-end;
+
+    &--centered {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__animated-bar {
@@ -55,6 +65,12 @@
     font-weight: 400;
     line-height: 1;
     letter-spacing: 9.6px;
+
+    &--centered {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 40px;
+    }
   }
 
   &__swiper {

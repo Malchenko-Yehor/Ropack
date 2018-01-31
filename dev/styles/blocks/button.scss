@@ -1,0 +1,25 @@
+.button {
+  cursor: pointer;
+  display: block;
+  border: 0;
+  border-radius: 30px;
+  width: 313px;
+  height: 53px;
+  background-color: #0255ff;
+  color: #ffffff;
+  font-family: "Ristretto-slab-pro Regular", Serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 2px;
+
+  &:hover, &:focus {
+    opacity: .8;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .button {
+      width: 280px;
+      height: 45px;    
+    }
+}

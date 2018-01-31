@@ -1,4 +1,5 @@
 .content {
+  position: relative;
   max-width: 1458px;
   margin-left: 120px;
 
@@ -6,12 +7,50 @@
   &--start {
     margin-top: -60px;
     padding-top: 123px;
-    background-image: url('../images/parallax-about-us.png');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 719px 776px;
     transform: translate3d(0,0,0);
+  }
 
+  &--about-page {
+    background-image: url('../images/parallax-about-us.png');    
+  }
+
+  &--partners-page {
+    background-image: url('../images/parallax-partners.png');    
+  }
+
+  &--news-page {
+    background-image: url('../images/parallax-news.png');
+  }
+
+  &--contacts-page {
+    background-image: url('../images/parallax-contacts.png');
+  }
+
+  &--food-page {
+    background-image: url('../images/parallax-food.png');
+  }
+
+  &--article-page {
+    background-image: url('../images/parallax-article.png');
+  }
+
+  &--outsourcing-page {
+    background-image: url('../images/parallax-outsourcing.png');
+  }
+
+  &--partner-page {
+    background-image: url('../images/parallax-partner.png');    
+  }
+
+  &__link {
+    margin-top: 18px;
+
+    a {
+      color: #1f2135;
+    }
   }
 
   &__title {
@@ -22,6 +61,10 @@
     font-weight: 400;
     line-height: 1;
     letter-spacing: 9.6px;
+
+    &--no-lspacing {
+      letter-spacing: 0px;
+    }
   }
 
   &__main {
@@ -33,6 +76,14 @@
     font-weight: 400;
     line-height: 1;
     letter-spacing: 1.8px;
+
+    &:hover {
+      color: #1f2135;
+    }
+
+    &--indent {
+      margin-top: 20px;
+    }
   }
 
   &__text {
@@ -42,6 +93,10 @@
     font-size: 18px;
     font-weight: 300;
     line-height: 24px;
+
+    &--indent {
+      margin-top: 76px;
+    }
   }
 
   &__header {
@@ -56,10 +111,26 @@
   &__holder {
     max-width: 660px;
     margin-left: auto;
+
+    &--wide {
+      max-width: 1290px;
+    }
+  }
+
+  &__button {
+    margin-top: 37px;
+
+    &--indent {
+      margin-top: 81px;
+    }
   }
 
   &__unordered-list-custom {
     margin-top: 39px; 
+  }
+
+  &__news-archive {
+    margin-top: 82px;
   }
 }
 
@@ -102,6 +173,7 @@
   .content {
     &__title {
       font-size: 55px;
+      letter-spacing: 0px;
     }
   }
 }

@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
+
   jQuery.scrollSpeed(200, 800);
 
   $(window).scroll(function(){
     changeLogo();
-    scrollMenu();
   });
 
     // Parallax
@@ -117,28 +117,6 @@ $(document).ready(function () {
 
   $('.callback__burger').click(function() {
     callback.close();
-  });
-
-  // SWIPERS INIT
-  var numbersSwiper = new Swiper ('.numbers__swiper', {
-    // Optional parameters
-    navigation: {
-      nextEl: '.numbers__slider-buttons .slider-buttons__next',
-      prevEl: '.numbers__slider-buttons .slider-buttons__previous',
-    },
-    effect: 'fade',
-    loop: true
-  });
-
-  var partnersSwiper = new Swiper ('.partners__swiper', {
-    // Optional parameters
-    navigation: {
-      nextEl: '.partners__slider-buttons .slider-buttons__next',
-      prevEl: '.partners__slider-buttons .slider-buttons__previous',
-    },
-    effect: 'fade',
-    speed: 500,
-    loop: true
   });
 
 });
@@ -264,6 +242,18 @@ function scrollMenu () {
     
   })
 }
+
+
+
+
+// $(document).ready(function(){
+//       // $fn.scrollSpeed(step, speed, easing);
+
+// });
+
+// Custom scrolling speed with jQuery
+// Source: github.com/ByNathan/jQuery.scrollSpeed
+// Version: 1.0.2
 
 (function($) {
     

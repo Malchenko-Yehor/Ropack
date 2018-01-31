@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+
   jQuery.scrollSpeed(200, 800);
 
   $(window).scroll(function(){
@@ -7,13 +8,27 @@ $(document).ready(function () {
     scrollMenu();
   });
 
-    // Parallax
+  // Parallax
   $(function() {
     var $el = $('.content--start');
     $(window).on('scroll', function () {
         var scroll = $(document).scrollTop();
         $el.css({
             'background-position':'0 '+(+.3*scroll)+'px'
+        });
+    });
+  });
+
+  $(function() {
+    var $el = $('.card-of-partner--partner-page');
+    var start = $('.card-of-partner--partner-page').css('top');
+
+    start = + start.slice(0,-2);
+    console.log(start);
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        $el.css({
+            'top': start+(0.3*scroll)+'px'
         });
     });
   });
@@ -117,28 +132,6 @@ $(document).ready(function () {
 
   $('.callback__burger').click(function() {
     callback.close();
-  });
-
-  // SWIPERS INIT
-  var numbersSwiper = new Swiper ('.numbers__swiper', {
-    // Optional parameters
-    navigation: {
-      nextEl: '.numbers__slider-buttons .slider-buttons__next',
-      prevEl: '.numbers__slider-buttons .slider-buttons__previous',
-    },
-    effect: 'fade',
-    loop: true
-  });
-
-  var partnersSwiper = new Swiper ('.partners__swiper', {
-    // Optional parameters
-    navigation: {
-      nextEl: '.partners__slider-buttons .slider-buttons__next',
-      prevEl: '.partners__slider-buttons .slider-buttons__previous',
-    },
-    effect: 'fade',
-    speed: 500,
-    loop: true
   });
 
 });
@@ -264,6 +257,18 @@ function scrollMenu () {
     
   })
 }
+
+
+
+
+// $(document).ready(function(){
+//       // $fn.scrollSpeed(step, speed, easing);
+
+// });
+
+// Custom scrolling speed with jQuery
+// Source: github.com/ByNathan/jQuery.scrollSpeed
+// Version: 1.0.2
 
 (function($) {
     
