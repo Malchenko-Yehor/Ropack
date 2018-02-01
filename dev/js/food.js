@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+  $('.more__info').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });
 
   jQuery.scrollSpeed(200, 800);
 

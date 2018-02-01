@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+  $('.more__info').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });
+
 
   jQuery.scrollSpeed(200, 800);
 
@@ -44,6 +49,18 @@ $(document).ready(function () {
     }
   });
 
+  // FEEDBACK INPUTS
+
+  $('.feedback__input input').focus(function () {
+    $(this).prev().css("top", "-10px");
+  });
+
+  $('.feedback__input input').blur(function () {
+    if ($(this).val() == "") {
+      $(this).prev().css("top", "50%");
+    }
+  });
+
   // Callback validation
   $('.callback__form').submit(function prevent(e) {
     $('.callback__error').text('');
@@ -63,6 +80,56 @@ $(document).ready(function () {
        $('.callback__error--phone').text('Неверный формат номера');
       $('.callback__phone').css('borderBottom', '2px solid #ff4d4d');
        e.preventDefault();
+    }
+  });
+
+  // Feedback validation
+  $('.feedback').submit(function prevent(e) {
+    $('.feedback__error').text('');
+    $('.feedback__input input').css('borderBottom', '2px solid #cedde2');
+    e.preventDefault();
+
+    // Company name check
+    if (validator.isEmpty($('.feedback__company').val())) {
+      $('.feedback__error--company').text('Введите название фирмы');
+      $('.feedback__company').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
+    }
+
+    // Name check
+    if (validator.isEmpty($('.feedback__name').val())) {
+      $('.feedback__error--name').text('Введите ФИО');
+      $('.feedback__name').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
+    }
+
+    // Phone check
+    if (validator.isEmpty($('.feedback__phone').val())) {
+      $('.feedback__error--phone').text('Введите номер');
+      $('.feedback__phone').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
+    } else if (!validator.isMobilePhone($('.feedback__phone').val(), 'any')) {
+       $('.feedback__error--phone').text('Неверный формат номера');
+      $('.feedback__phone').css('borderBottom', '2px solid #ff4d4d');
+       e.preventDefault();
+    }
+
+    // E-mail check
+    if (validator.isEmpty($('.feedback__mail').val())) {
+      $('.feedback__error--mail').text('Введите E-mail');
+      $('.feedback__mail').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
+    } else if (!validator.isEmail($('.feedback__mail').val())) {
+       $('.feedback__error--mail').text('Неверный формат email');
+      $('.feedback__mail').css('borderBottom', '2px solid #ff4d4d');
+       e.preventDefault();
+    }
+
+    // Application check
+    if (validator.isEmpty($('.feedback__application').val())) {
+      $('.feedback__error--application').text('Заполните поле заявки');
+      $('.feedback__application').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
     }
   });
 
@@ -133,6 +200,12 @@ $(document).ready(function () {
   $('.callback__burger').click(function() {
     callback.close();
   });
+
+  // $('.more__info').click(function() {
+  //   callback.open();
+  // });
+
+  
 
 });
 

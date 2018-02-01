@@ -1,0 +1,28 @@
+.brands__item {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .brands__item span {
+    color: #2f3035;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1; }
+
+.brands__logo {
+  position: relative;
+  margin-right: 20px;
+  max-width: 150px; }
+  .brands__logo img {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJyYW5kcy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIscUJBQWM7RUFBZCxzQkFBYztFQUFkLHFCQUFjO0VBQWQsY0FBYztFQUNkLDBCQUFvQjtFQUFwQiw0QkFBb0I7TUFBcEIsdUJBQW9CO1VBQXBCLG9CQUFvQixFQUFFO0VBQ3RCO0lBQ0UsZUFBZTtJQUNmLGlEQUFpRDtJQUNqRCxnQkFBZ0I7SUFDaEIsaUJBQWlCO0lBQ2pCLGVBQWUsRUFBRTs7QUFFckI7RUFDRSxtQkFBbUI7RUFDbkIsbUJBQW1CO0VBQ25CLGlCQUFpQixFQUFFO0VBQ25CO0lBQ0UsWUFBWTtJQUNaLGFBQWE7SUFDYixrQkFBa0I7SUFDbEIsbUJBQW1CLEVBQUUiLCJmaWxlIjoiYmxvY2tzL2JyYW5kcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnJhbmRzX19pdGVtIHtcbiAgbWFyZ2luLXRvcDogMzBweDtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjsgfVxuICAuYnJhbmRzX19pdGVtIHNwYW4ge1xuICAgIGNvbG9yOiAjMmYzMDM1O1xuICAgIGZvbnQtZmFtaWx5OiBcIlJpc3RyZXR0by1wcm8gUmVndWxhclwiLCBzYW5zLXNlcmlmO1xuICAgIGZvbnQtc2l6ZTogMjhweDtcbiAgICBmb250LXdlaWdodDogNDAwO1xuICAgIGxpbmUtaGVpZ2h0OiAxOyB9XG5cbi5icmFuZHNfX2xvZ28ge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIG1hcmdpbi1yaWdodDogMjBweDtcbiAgbWF4LXdpZHRoOiAxNTBweDsgfVxuICAuYnJhbmRzX19sb2dvIGltZyB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiBhdXRvO1xuICAgIG1hcmdpbi1sZWZ0OiBhdXRvO1xuICAgIG1hcmdpbi1yaWdodDogYXV0bzsgfVxuIl19 */

@@ -12,6 +12,19 @@
     font-weight: 700;
     line-height: 1;
 
+    a {
+      text-decoration: none;
+      color: #1f2135;
+      font-family: Roboto, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
     &::before {
       content: '';
       position: absolute;

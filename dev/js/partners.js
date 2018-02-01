@@ -1,9 +1,5 @@
 $(document).ready(function () {
 
-  // var overflowInHtml = document.documentElement.scrollHeight > document.documentElement.clientHeight;
-  // var scrollingTag = overflowInHtml ? 'html' : 'body';
-  // console.log(scrollingTag);
-  // $(scrollingTag).smoothWheel();
 
   $(window).scroll(function(){
     changeLogo();

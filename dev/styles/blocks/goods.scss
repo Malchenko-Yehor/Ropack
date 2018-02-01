@@ -1,0 +1,66 @@
+.goods {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+  &__title {
+    margin-top: 80px;
+    color: #1f2135;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+
+  &__holder {
+    margin-top: 20px;
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__left {
+    width: 50%;
+  }
+
+  &__header {
+    margin-top: 20px;
+    color: #1f2135;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 80px;
+    color: #1f2135;
+    font-family: "Ristretto-pro Regular", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 36px;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .goods {
+    margin-right: 0;
+    margin-left: rem(122);
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .goods {
+    margin-left: rem(65);
+
+    &__holder {
+      flex-direction: column;
+    }
+
+    &__header {
+
+    }
+  }
+}

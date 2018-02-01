@@ -1,0 +1,29 @@
+.brands {
+  &__item {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: #2f3035;
+      font-family: "Ristretto-pro Regular", sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 1;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    margin-right: 20px;
+    max-width: 150px;
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+}

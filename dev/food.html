@@ -142,17 +142,54 @@
       </div>
 
       <ul class="content__unordered-list-custom unordered-list-custom">
-        <li class="unordered-list-custom__item">Запорная арматура</li>
-        <li class="unordered-list-custom__item">Фильтры</li>
-        <li class="unordered-list-custom__item">Насосы</li>
-        <li class="unordered-list-custom__item">Моторы Редукторы Двигатели</li>
-        <li class="unordered-list-custom__item">Ленты Муфты Ремни Подшипники Форсунки </li>
-        <li class="unordered-list-custom__item">Электроника и измерительная техника</li>
-        <li class="unordered-list-custom__item">Пневматика</li>
-        <li class="unordered-list-custom__item">Гидравлика</li>
+        <li class="unordered-list-custom__item"><a href="armature.html"  target="_blank">Запорная арматура</a></li>
+        <li class="unordered-list-custom__item"><a href="filters.html" target="_blank">Фильтры</a></li>
+        <li class="unordered-list-custom__item"><a href="pumps.html" target="_blank">Насосы</a></li>
+        <li class="unordered-list-custom__item"><a href="reductors.html" target="_blank">Моторы Редукторы Двигатели</a></li>
+        <li class="unordered-list-custom__item"><a href="tapes.html" target="_blank">Ленты Муфты Ремни Подшипники Форсунки </a></li>
+        <li class="unordered-list-custom__item"><a href="electronics.html" target="_blank">Электроника и измерительная техника</a></li>
+        <li class="unordered-list-custom__item"><a href="pneumatics.html" target="_blank">Пневматика</a></li>
+        <li class="unordered-list-custom__item"><a href="hydraulics.html" target="_blank">Гидравлика</a></li>
       </ul>
 
-      <button class="button content__button">ПОЛУЧИТЬ БОЛЬШЕ ИНФОРМАЦИИ</button>
+      <button href="#popup" class="more__info button content__button">ПОЛУЧИТЬ БОЛЬШЕ ИНФОРМАЦИИ</button>
+
+      <form method="post" class="feedback feedback--popup mfp-hide" id="popup">
+          <div class="feedback__input">
+            <label for="feedback-company">Название компании</label>
+            <input class="feedback__company" id="feedback-company" type="text" name="company">
+            <div class="feedback__error feedback__error--company"></div>
+          </div>
+
+          <div class="feedback__input">
+            <label for="feedback-name">ФИО</label>
+            <input class="feedback__name" id="feedback-name" type="text" name="name">
+            <div class="feedback__error feedback__error--name"></div>
+          </div> 
+
+          <div class="feedback__input">
+            <label for="feedback-phone">Контактный телефон</label>
+            <input class="feedback__phone" id="feedback-phone" type="text" name="phone">
+            <div class="feedback__error feedback__error--phone"></div>
+          </div>
+
+          <div class="feedback__input">
+            <label for="feedback-mail">E-mail</label>
+            <input class="feedback__mail" id="feedback-mail" type="text" name="mail">
+            <div class="feedback__error feedback__error--mail"></div>
+          </div>
+
+          <div class="feedback__input">
+            <label for="feedback-application">Поле для заявки</label>
+            <input class="feedback__application" id="feedback-application" type="text" name="application">
+            <div class="feedback__error feedback__error--application"></div>
+          </div>
+
+          <div class="g-recaptcha feedback__captcha" data-sitekey="6LenX0MUAAAAAHj-8gEdkdCFDLFvPzlzPDeC6uND"></div>
+
+          <input class="feedback__submit" type="submit" name="submit" value="ОТПРАВИТЬ ЗАПРОС">
+
+      </form>
     </div>
   </div>
 
@@ -211,7 +248,9 @@
   <script src="js/keyframes.js"></script>
   <script src="js/inview.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/magnific-popup.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
   <script src="js/food.js"></script>
 </body>
 </html>
