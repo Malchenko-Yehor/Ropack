@@ -6,11 +6,11 @@
   <title>Контакты</title>
   
   <!-- FAVICON -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="manifest.json">
-  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="styles/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="styles/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="styles/favicons/favicon-16x16.png">
+  <link rel="manifest" href="styles/favicons/manifest.json">
+  <link rel="mask-icon" href="styles/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
 
   <!-- Styles -->
@@ -132,15 +132,18 @@
   <div class="content content--start content--contacts-page">
     <div class="content__holder">
       <a class="content__main" href="main.html">ГЛАВНАЯ</a>
-      <div class="content__title">Контакты</div>
+      <div class="content__title">
+        <div class="about-company__animated-bar animated-bar"></div>
+        Контакты
+      </div>
       <div class="content__header">
         Ropack — производственное оборудование
       </div>
       <div class="content__text">
         65014, г. Одесса,  ул. Люстдорфская дорога 140-А
         <div class="content__link"><a class="link" href="#"><span>МЫ НА КАРТЕ GOOGLE MAPS</span></a></div>
-        +38 (048) 737—43—41
-        <div class="content__link"><a class="link" href="#"><span>INFO@ROPACK.COM.UA</span></a></div>
+        <a clas="content__tel" href="tel:+370487374341">+37 (048) 737-43-41</a>
+        <div class="content__link"><a class="link" href="mail: info@ropack.com.ua"><span>INFO@ROPACK.COM.UA</span></a></div>
       </div>
 
       <div class="content__header">Форма обратной связи</div>
@@ -213,14 +216,7 @@
   <!-- END OF WRAPPER -->
   </div>
   <!-- SCRIPTS -->
-  <script src="js/jquery-3.2.1.min.js"></script>
-  <script src="js/arbitrary-anchor.js"></script>
-  <script src="js/keyframes.js"></script>
-  <script src="js/inview.js"></script>
-  <script src="js/validator.js"></script>
-  <script src="js/parallax.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
-  <script src="js/contacts.js"></script>
+  <script src="js/lib.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

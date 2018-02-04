@@ -109,10 +109,10 @@
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 760px) {
   .outsourcing {
     &__holder {
-      margin-left: rem(80);
+      margin-left: rem(20);
       margin-right: 0;
     }
 
@@ -125,7 +125,8 @@
 @media only screen and (max-width: 480px) {
   .outsourcing {
     &__title {
-      font-size: 60px;
+      font-size: 45px;
+      letter-spacing: 0px;
     }
   }
 }

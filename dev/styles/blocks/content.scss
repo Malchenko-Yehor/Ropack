@@ -3,6 +3,17 @@
   max-width: 1458px;
   margin-left: 120px;
 
+  &__tel {
+    text-decoration: none;
+    color: #2f3035; 
+  }
+
+  &__animated-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
 
   &--start {
     margin-top: -60px;
@@ -54,6 +65,7 @@
   }
 
   &__title {
+    position: relative;
     margin-top: 207px;
     color: #1f2135;
     font-family: "Ristretto-pro Regular", sans-serif;
@@ -154,7 +166,7 @@
 
 @media only screen and (max-width: 760px) {
   .content {
-    margin-left: rem(80);
+    margin-left: rem(20);
 
     &--start {
       background: none;
@@ -172,7 +184,7 @@
 @media only screen and (max-width: 500px) {
   .content {
     &__title {
-      font-size: 55px;
+      font-size: 45px;
       letter-spacing: 0px;
     }
   }

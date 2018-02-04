@@ -1,10 +1,43 @@
 $(document).ready(function () {
 
+  $('.more__info').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+  });
+
   jQuery.scrollSpeed(200, 800);
 
   $(window).scroll(function(){
     changeLogo();
     scrollMenu();
+  });
+
+  // Parallax
+  $(function() {
+    var $el = $('.content--start');
+    var divHeight = $el.height();
+    var backgroundHeight = 777;
+    var way = divHeight - backgroundHeight;
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        $el.css({
+            'background-position':'0 '+(+(backgroundHeight/way)*scroll)+'px'
+        });
+    });
+  });
+
+  $(function() {
+    var $el = $('.card-of-partner--partner-page');
+    var start = $('.card-of-partner--partner-page').css('top');
+
+    start = + start.slice(0,-2);
+    console.log(start);
+    $(window).on('scroll', function () {
+        var scroll = $(document).scrollTop();
+        $el.css({
+            'top': start+(0.3*scroll)+'px'
+        });
+    });
   });
 
     // CALLBACK INPUTS
@@ -13,6 +46,18 @@ $(document).ready(function () {
   });
 
   $('.callback__input input').blur(function () {
+    if ($(this).val() == "") {
+      $(this).prev().css("top", "50%");
+    }
+  });
+
+  // FEEDBACK INPUTS
+
+  $('.feedback__input input').focus(function () {
+    $(this).prev().css("top", "-10px");
+  });
+
+  $('.feedback__input input').blur(function () {
     if ($(this).val() == "") {
       $(this).prev().css("top", "50%");
     }
@@ -37,6 +82,56 @@ $(document).ready(function () {
        $('.callback__error--phone').text('Неверный формат номера');
       $('.callback__phone').css('borderBottom', '2px solid #ff4d4d');
        e.preventDefault();
+    }
+  });
+
+  // FEEDBACK VALIDATION
+  $('.feedback').submit(function prevent(e) {
+    $('.feedback__error').text('');
+    $('.feedback__input input').css('borderBottom', '2px solid #cedde2');
+    e.preventDefault();
+
+    // Company name check
+    if (validator.isEmpty($('.feedback__company').val())) {
+      $('.feedback__error--company').text('Введите название фирмы');
+      $('.feedback__company').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
+    }
+
+    // Name check
+    if (validator.isEmpty($('.feedback__name').val())) {
+      $('.feedback__error--name').text('Введите ФИО');
+      $('.feedback__name').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
+    }
+
+    // Phone check
+    if (validator.isEmpty($('.feedback__phone').val())) {
+      $('.feedback__error--phone').text('Введите номер');
+      $('.feedback__phone').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
+    } else if (!validator.isMobilePhone($('.feedback__phone').val(), 'any')) {
+       $('.feedback__error--phone').text('Неверный формат номера');
+      $('.feedback__phone').css('borderBottom', '2px solid #ff4d4d');
+       e.preventDefault();
+    }
+
+    // E-mail check
+    if (validator.isEmpty($('.feedback__mail').val())) {
+      $('.feedback__error--mail').text('Введите E-mail');
+      $('.feedback__mail').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
+    } else if (!validator.isEmail($('.feedback__mail').val())) {
+       $('.feedback__error--mail').text('Неверный формат email');
+      $('.feedback__mail').css('borderBottom', '2px solid #ff4d4d');
+       e.preventDefault();
+    }
+
+    // Application check
+    if (validator.isEmpty($('.feedback__application').val())) {
+      $('.feedback__error--application').text('Заполните поле заявки');
+      $('.feedback__application').css('borderBottom', '2px solid #ff4d4d');
+      e.preventDefault();
     }
   });
 
