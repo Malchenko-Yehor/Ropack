@@ -1,7 +1,10 @@
 .content {
-  position: relative;
   max-width: 1458px;
   margin-left: 120px;
+  display: flex;
+  align-content: stretch;
+  justify-content: flex-end;
+  position: relative;
 
   &__tel {
     text-decoration: none;
@@ -18,42 +21,58 @@
   &--start {
     margin-top: -60px;
     padding-top: 123px;
+    transform: translate3d(0,0,0);
+    justify-content: space-between;
+  }
+
+  &__wrapper {
+    position: absolute;
+  }
+
+  &__background {
+    width: 719px;
+    height: 776px;
+    position: sticky;
+    top: 0;
+    margin-top: -123px;
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 719px 776px;
-    transform: translate3d(0,0,0);
-  }
 
-  &--about-page {
-    background-image: url('../images/parallax-about-us.png');    
-  }
+    &--about-page {
+      background-image: url('../images/parallax-about-us.png');    
+    }
 
-  &--partners-page {
-    background-image: url('../images/parallax-partners.png');    
-  }
+    &--partners-page {
+      background-image: url('../images/parallax-partners.png');    
+    }
 
-  &--news-page {
-    background-image: url('../images/parallax-news.png');
-  }
+    &--news-page {
+      position: absolute;
+      left: 0;
+      top: -323px;
+      background-image: url('../images/parallax-news.png');
+    }
 
-  &--contacts-page {
-    background-image: url('../images/parallax-contacts.png');
-  }
+    &--contacts-page {
+      background-image: url('../images/parallax-contacts.png');
+    }
 
-  &--food-page {
-    background-image: url('../images/parallax-food.png');
-  }
+    &--food-page {
+      background-image: url('../images/parallax-food.png');
+    }
 
-  &--article-page {
-    background-image: url('../images/parallax-article.png');
-  }
+    &--article-page {
+      background-image: url('../images/parallax-article.png');
+    }
 
-  &--outsourcing-page {
-    background-image: url('../images/parallax-outsourcing.png');
-  }
+    &--outsourcing-page {
+      background-image: url('../images/parallax-outsourcing.png');
+    }
 
-  &--partner-page {
-    background-image: url('../images/parallax-partner.png');    
+    &--partner-page {
+      background-image: url('../images/parallax-partner.png');    
+    }
   }
 
   &__link {
@@ -122,10 +141,14 @@
 
   &__holder {
     max-width: 660px;
-    margin-left: auto;
+    width: 100%;
 
     &--wide {
       max-width: 1290px;
+    }
+
+    &--go-right {
+      margin-left: auto;
     }
   }
 
@@ -152,8 +175,8 @@
       margin-top: 70px;
     }
 
-    &--start {
-      background: none;
+    &__background {
+      display: none;
     }
 
     &__holder {
@@ -167,10 +190,6 @@
 @media only screen and (max-width: 760px) {
   .content {
     margin-left: rem(20);
-
-    &--start {
-      background: none;
-    }
 
     &__holder {
       margin-left: auto;

@@ -19,7 +19,7 @@
     background-position: left top;
 
    &--main-page {
-      background: none;
+      background: none !important;
     }
   }
 
@@ -60,6 +60,8 @@
   }
 
   &__call {
+    position: relative;
+    z-index: 20;
     margin-left: auto;
     margin-right: 179px;
     padding-top: 70px;
@@ -138,49 +140,46 @@
     }
 
     &__callback {
-      margin-left: 0;
+      margin-left: auto;
+      margin-right: 15px;
     }
 
     &__phone-number {
-      margin-left: rem(25);
+      margin-left: auto;
+      margin-right: 35px; 
     }
   }
 }
 
 @media only screen and (max-width: 760px) {
   .header {
+    margin-top: 54px;
+
+    &--main-page {
+      top: 0;
+    }
+
     &__logo {
       display: none;
     }
 
     &__holder {
-      margin-left: rem(50);
-    }
-
-    &__call {
-      padding-top: 24px;
-    }
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .header {
-    
-    &__holder {
+      margin-left: 0;
+      background-size: cover;
+      background-image: url(../images/header-background-trimmed.png);
       height: 100px;
     }
 
     &__call {
-      padding-top: 13px;
-      flex-direction: column;
-      align-items: flex-start;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 15px;
+      align-items: center;
     }
 
-    &__callback {
-      width: 220px;
-      height: 44px;
-      margin-top: 5px;
-      margin-left: rem(10);
+    &__callback, &__phone-number {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }

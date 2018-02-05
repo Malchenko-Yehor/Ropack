@@ -15,7 +15,7 @@
   &__holder {
     position: relative;
     width: 87.39vw;
-    height: calc(87.39vw * .5661);
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     background-repeat: no-repeat;
@@ -148,7 +148,7 @@
   &__slider-buttons {
     z-index: 10;
     top: 50%;
-    right: 20%;
+    left: 80%;
     transform: translateY(-50%);
     position: absolute;
   }
@@ -202,17 +202,26 @@
       margin-right: 15px;
     }
 
+    &__wrapper {
+      margin-left: rem(120);
+    }
+
     &__successes {
       padding-right: 35px;
     }
   }
 }
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 760px){
   .advantages {
     &__name {
       font-size: rem(60);
       line-height: 1;
+    }
+
+    &__wrapper {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 }
@@ -225,6 +234,11 @@
 
     &__swiper {
       display: block;
+      width: 300px;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &__person {

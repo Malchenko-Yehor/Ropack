@@ -12,33 +12,6 @@ $(document).ready(function () {
     scrollMenu();
   });
 
-  // Parallax
-  $(function() {
-    var $el = $('.content--start');
-    var divHeight = $el.height();
-    var backgroundHeight = 777;
-    var way = divHeight - backgroundHeight;
-    $(window).on('scroll', function () {
-        var scroll = $(document).scrollTop();
-        $el.css({
-            'background-position':'0 '+(+(backgroundHeight/way)*scroll)+'px'
-        });
-    });
-  });
-
-  $(function() {
-    var $el = $('.card-of-partner--partner-page');
-    var start = $('.card-of-partner--partner-page').css('top');
-
-    start = + start.slice(0,-2);
-    console.log(start);
-    $(window).on('scroll', function () {
-        var scroll = $(document).scrollTop();
-        $el.css({
-            'top': start+(0.3*scroll)+'px'
-        });
-    });
-  });
 
     // CALLBACK INPUTS
   $('.callback__input input').focus(function () {

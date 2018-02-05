@@ -138,6 +138,22 @@
   }
 }
 
+@media only screen and (max-width: 760px) {
+  .menu {
+    &__ordered-list, &__submenu {
+      transform: translateY(-65%);
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__submenu {
+      right: 20px;
+    }
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .menu {
     &__submenu {

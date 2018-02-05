@@ -1,6 +1,7 @@
 .sections {
   position: relative;
   padding-bottom: 134px;
+  overflow: hidden;
 
   &__sign {
     z-index: -1;
