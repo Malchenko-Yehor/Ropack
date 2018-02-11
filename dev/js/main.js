@@ -1,4 +1,14 @@
 $(document).ready(function () {
+  
+  if($(".screen").length != 0) {
+    if ($(window).width() >= 1366) {
+      $.scrollify({
+        // section : ".screen"
+        interstitialSection : ".screen, .footer",
+        standardScrollElements : ".advantages"
+      });
+    }    
+  }
 
   $('.more__info').magnificPopup({
     type:'inline',
@@ -187,6 +197,16 @@ $(document).ready(function () {
     loop: true
   });
 
+    var numbersSwiper = new Swiper ('.numbers__swiper', {
+    // Optional parameters
+    navigation: {
+      nextEl: '.numbers__slider-buttons .slider-buttons__next',
+      prevEl: '.numbers__slider-buttons .slider-buttons__previous',
+    },
+    effect: 'fade',
+    loop: true
+  });
+
   var partnersSwiper = new Swiper ('.partners__swiper', {
     // Optional parameters
     navigation: {
@@ -344,7 +364,7 @@ function scrollMenu () {
   $sections.each(function(){
     var divPosition = $(this).offset().top;
     
-    if( divPosition - 100 < currentScroll ){
+    if( divPosition - 300 < currentScroll ){
       $currentSection = $(this);    
     }
 

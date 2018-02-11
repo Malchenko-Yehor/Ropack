@@ -16,7 +16,7 @@
     padding: 0;
     list-style-type: none;
     margin-left: rem(45);
-    margin-top: rem(200);
+    margin-top: rem(95);
     width: 21px;
     font-family: "Ristretto-pro Regular";
     font-size: rem(18);
@@ -24,6 +24,8 @@
     letter-spacing: 1.8px;
 
     a {
+      display: block;
+      margin-top: 8px;
       color: #8b8c96;
       text-decoration: none;
 
@@ -43,7 +45,7 @@
     height: 38px;
     position: absolute;
     margin-left: rem(30);
-    margin-top: rem(450);
+    margin-top: rem(330);
     cursor: pointer;
     background-repeat: no-repeat;
     background-image: url(../images/navigation__burgerInActive.png);

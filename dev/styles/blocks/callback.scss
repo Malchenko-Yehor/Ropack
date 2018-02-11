@@ -224,3 +224,22 @@
     }
   }
 }
+
+@media only screen and (max-height: 470px) {
+  .callback {
+    
+    &__right-side {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    &__title {
+      margin-bottom: 0px;
+      margin-top: 15px;
+    }
+
+    &__input {
+      margin-top: 55px;
+    }
+  }
+}

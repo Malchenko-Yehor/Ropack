@@ -54,8 +54,10 @@
       opacity: 0.8;
       color: #1f2135;
       font-family: Roboto;
-      font-size: rem(15.5);
+      font-size: rem(13);
       font-style: italic;
+      letter-spacing: 1px;
+      word-spacing: 2px;
     }
   }
 
@@ -72,7 +74,7 @@
   }
 
   &__phone-number {
-    color: #fff;
+    color: #ffffff !important;
     font-family: Roboto;
     font-size: rem(24);
     font-weight: 300;

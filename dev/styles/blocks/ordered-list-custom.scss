@@ -85,3 +85,13 @@
     }
   }
 }
+
+
+
+@media only screen and (max-height: 420px) {
+  .ordered-list-custom {
+    &__item {
+      margin-top: 10px;
+    }
+  }
+}

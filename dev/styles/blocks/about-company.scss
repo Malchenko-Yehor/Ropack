@@ -42,7 +42,7 @@
 
   &__content {
     position: relative;
-    margin-top: calc((100vw - 21vw) * 0.275);
+    margin-top: calc((100vw - 21vw) * 0.35);
     margin-left: (281/1521) * 100%;
   }
 
@@ -67,7 +67,7 @@
 
   &__link {
     margin-top: rem(38);
-    color: #f7f7f7;
+    color: #f7f7f7 !important;
   }
 }
 
@@ -156,7 +156,7 @@
 
     &__content {
       margin-top: rem(250);
-      margin-left: rem(20);
+      margin-left: rem(120);
       margin-right: rem(122);
     }
 
@@ -184,6 +184,10 @@
 
     &__link {
       margin-top: rem(15);
+    }
+
+    &__content {
+      margin-left: rem(20);
     }
   }
 }

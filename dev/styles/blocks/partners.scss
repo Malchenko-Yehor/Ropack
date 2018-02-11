@@ -35,12 +35,14 @@
     right: 417px;
     top: 167px;
     color: #1f2135;
+    display: inline-block;
+    width: auto;
 
     &--about-page {
-      right: auto;
-      top: auto;
+      right: auto !important;
+      top: auto !important;
       left: 50%;
-      bottom: 70px;
+      bottom: 70px !important;
     }
   }
 
@@ -168,6 +170,14 @@
 
 @media only screen and (max-width: 1850px) {
   .partners {
+    &__title {
+      top: 40px;
+    }
+
+    &__more {
+      top: 95px;
+    }
+
     &__swiper {
       margin-left: rem(122);
     }
@@ -194,7 +204,6 @@
     }
 
     &__more {
-      top: 120px;
       right: 5%;
     }
   }
@@ -210,6 +219,14 @@
     &__big-circle,
     &__small-circle {
       display: none;
+    }
+
+    &__more {
+      &--about-page {
+        top: 90px !important;
+        left: 120px;
+        bottom: auto !important;
+      }
     }
   }
 }

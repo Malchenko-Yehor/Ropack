@@ -18,7 +18,7 @@
 
     &--centered {
       bottom: auto;
-      top: 0;
+      top: 90px;
       right: auto;
       left: 50%;
       transform: translateX(-50%);
@@ -198,6 +198,7 @@
       content: '';
       position: absolute;
       left: -13.5px;
+      top: 0;
       width: 142px;
       height: 142px;
       opacity: 0;
@@ -244,6 +245,10 @@
     width: 115px;
     height: 115px;
     margin-right: 26px;
+
+    ._light-grey {
+      fill: #fff;
+    }
 
     ._light-grey, ._black {
       transition: fill .5s;

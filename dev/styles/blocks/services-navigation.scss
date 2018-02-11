@@ -152,7 +152,7 @@
 
 @media only screen and (max-width: 1050px) {
   .services-navigation {
-    max-width: 200px;
+    max-width: 300px;
 
     &__item {
       height: auto;
@@ -167,15 +167,33 @@
     }
 
     &__svg-icon {
-      display: none;
+      margin-right: 0;
     }
 
     &__arrow {
-      position: relative;
-      left: auto;
-      right: auto;
-      top: autto;
-      transform: translate(0, 0);
+      
+      &--left {
+        right: calc(100% + 10px);
+      }
+
+      &--right {
+        left: calc(100% + 10px);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .services-navigation {
+    max-width: 240px;
+
+    &__svg-icon {
+      width: 75px;
+      height: 75px;
+    }
+
+    &__arrow {
+      transform: translateY(-50%) scale(0.6, 0.6);
     }
   }
 }
