@@ -263,7 +263,7 @@ function MENU(menu, burger, mainList, subList) {
   var opened = false;
 
   function open() {
-    menu.show();
+    menu.fadeIn(300);
     burger.forEach(function (item) {
       $(item).addClass('is-active');
     });
@@ -271,7 +271,7 @@ function MENU(menu, burger, mainList, subList) {
   }
 
   function close() {
-    menu.hide();
+    menu.fadeOut(300);
     burger.forEach(function (item) {
       $(item).removeClass('is-active');
     });
@@ -317,7 +317,7 @@ function CALLBACK(callback, openButton, closeButton) {
     this.opened = true;
     test = true;
 
-    callback.show();
+    callback.fadeIn(300);
 
     closeButton.forEach(function (item) {
       $(item).addClass('is-active');
@@ -328,7 +328,7 @@ function CALLBACK(callback, openButton, closeButton) {
     this.opened = false;
     test = false;
 
-    callback.hide();
+    callback.fadeOut(300);
 
     closeButton.forEach(function (item) {
       $(item).removeClass('is-active');

@@ -99,6 +99,10 @@
     ._light-grey, ._black {
       transition: fill .5s;
     }
+
+    ._light-grey {
+      fill: #ffffff;
+    }
   }
 
   &__arrow {

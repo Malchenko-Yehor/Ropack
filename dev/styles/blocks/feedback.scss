@@ -6,8 +6,9 @@
       margin-right: auto;
       margin-bottom: 0;
       background-color: #fff;
-      padding: 20px;
+      padding: 40px;
       border-radius: 15px;
+      background-color: #333547;
 
       .feedback__input {
         margin-top: 50px;
@@ -123,4 +124,8 @@
       transform: scale(.9, .9);
     }
   }
+}
+
+.mfp-close {
+  color: #fff !important;
 }
