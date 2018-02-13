@@ -3,6 +3,8 @@ $(document).ready(function () {
   if($(".screen").length != 0) {
     if ($(window).width() >= 1366) {
       $.scrollify({
+        scrollSpeed: 600,
+        easing: "linear",
         section: ".screen",
         setHeights: false,
         interstitialSection : ".footer",
