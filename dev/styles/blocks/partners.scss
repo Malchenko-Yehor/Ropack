@@ -47,6 +47,7 @@
   }
 
   &__sign {
+    user-select: none; 
     z-index: 10;
     position: absolute;
     bottom: 0;

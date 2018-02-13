@@ -10,6 +10,7 @@
   }
 
   &__sign {
+    user-select: none; 
     position: absolute;
     bottom: 0;
     right: 118px;

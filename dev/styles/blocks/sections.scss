@@ -4,6 +4,7 @@
   overflow: hidden;
 
   &__sign {
+    user-select: none; 
     z-index: -1;
     position: absolute;
     bottom: 0;
